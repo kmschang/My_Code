@@ -1,12 +1,16 @@
 from random import randint
 againq = True
 
-namesq = input("Do you want to play with names? (y or n)\n:")
+while True:
+    
+    namesq = input("Do you want to play with names? (y or n)\n:")
 
-if namesq.lower() == 'y':
-    qname = True
-if namesq.lower() == 'n':
-    qname = False
+    if namesq.lower() == 'y':
+        qname = True
+        break
+    if namesq.lower() == 'n':
+        qname = False
+        break
 
 while againq == True:
 
