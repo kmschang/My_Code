@@ -1,46 +1,30 @@
-quesagain = True
-game = True
-
-def poor_clear():
-    print ("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-
+def poor_man_clear(num=100):
+    print ("\n"*num)
 
 def again():
     while True:
-        qagain = input ("Do you want to play again? (y or n)\n:")
-        if qagain.lower() == 'y':
-            quesagain = True
-            break
-        if qagain.lower() == 'n':
-            quesagain = False
-            break
-        break
+        question = input("Do you want to play again? (y or n)\n:")
+        if question.lower() == 'n':
+            return False
+        if question.lower() == 'y':
+            return True
 
+yes = True
 
-
-
-while quesagain == True:
-
-    poor_clear()
+while yes == True:
 
     while True:
-
-        ques = input("Do you want to play a game? (y or n)\n:")
-
-        if ques.lower() == 'y':
-            game = True
+        poor_man_clear(100)
+        question2 = input("'yes' or 'no'\n:")
+        if question2.lower() == 'yes':
+            print ("You lost! LOL.\n")
             break
-
-        if ques.lower() == 'n':
-            game = False
+        if question2.lower() == 'no':
+            print ("You won! Good Job.\n")
             break
+        else:
+            print ("Please type eith 'yes' or 'no'.")
 
-    if game == True:
 
-        print ("Sorry. There is no game actually. LOL")
-
-    elif game == False:
-
-        print ("You won. There wasn't even a game.")
-
-    again()
+    if again() == False:
+        break
