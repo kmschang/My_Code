@@ -48,7 +48,7 @@ while again == True:
 
     if tails == False and qtails == True:
         print ("You lost! It was tails!")
-        
+
 
     while True:
 

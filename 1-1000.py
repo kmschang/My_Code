@@ -2,7 +2,7 @@ from random import randint
 againq = True
 
 while True:
-    
+
     namesq = input("Do you want to play with names? (y or n)\n:")
 
     if namesq.lower() == 'y':
