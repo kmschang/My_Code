@@ -44,7 +44,3 @@ while quesagain == True:
         print ("You won. There wasn't even a game.")
 
     again()
-
-    if quesagain == False:
-        break
-    
