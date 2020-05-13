@@ -2,16 +2,19 @@ def poor_man_clear(num=100):
     '''
     This clears the screen to make it look nicer
     '''
-    print ('\n'*num)
+    print('\n'*num)
+
 
 def headstails():
     '''
     Make sure that you import randint before. This chooses between 1 and 2.
     '''
-    if randint(1,3) == 1:
+    from random import randint
+    if randint(1, 3) == 1:
         return True
-    if randint(1,3) == 2:
+    if randint(1, 3) == 2:
         return False
+
 
 def again():
     '''
@@ -26,13 +29,14 @@ def again():
             else:
                 break
         else:
-            print ("Please only type 'y' for yes and 'n' for no.")
+            print("Please only type 'y' for yes and 'n' for no.")
 
-def lesser_of_two_evens(a,b):
+
+def lesser_of_two_evens(a, b):
     '''
     Prints the smaller number if both are even and the larger one if one or more is odd. Don't forget to add the print feature if you want to see the output.
     '''
-    if a % 2 == 0 and b %2 == 0:
-        return min(a,b)
+    if a % 2 == 0 and b % 2 == 0:
+        return min(a, b)
     else:
-        return max(a,b)
+        return max(a, b)
