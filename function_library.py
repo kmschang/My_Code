@@ -27,3 +27,12 @@ def again():
                 break
         else:
             print ("Please only type 'y' for yes and 'n' for no.")
+
+def lesser_of_two_evens(a,b):
+    '''
+    Prints the smaller number if both are even and the larger one if one or more is odd. Don't forget to add the print feature if you want to see the output.
+    '''
+    if a % 2 == 0 and b %2 == 0:
+        return min(a,b)
+    else:
+        return max(a,b)
