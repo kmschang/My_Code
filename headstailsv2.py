@@ -19,6 +19,7 @@ def again():
             print ("Please only type 'y' for yes and 'n' for no.")
 
 poor_man_clear(100)
+
 while True:
 
     while True:
