@@ -18,7 +18,7 @@ def again():
         else:
             print ("Please only type 'y' for yes and 'n' for no.")
 
-
+poor_man_clear(100)
 while True:
 
     while True:
@@ -30,7 +30,7 @@ while True:
             qheads = False
             break
 
-        isheads = headstails()
+    isheads = headstails()
 
     if isheads == True and qheads == True:
         print ("It was heads. You won!")
