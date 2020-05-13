@@ -1,53 +1,62 @@
 from random import randint
 
-print ("Game Rule: \nIf you want heads, type heads.\nIf you want tails, type tails.\nIf you want to leave, type end.\n")
+qheads = False
+qtails = False
+again = True
+heads = False
+tails = False
+stop = False
 
-while True:
+while again == True:
 
-	while True:
+    print ("Thank you for playing! Hope you enjoy the game.")
 
-		answer = input("Heads or Tails?\n:")
-		lower = answer.lower()
+    rannum = randint(1,3)
+
+    while True:
+
+        ques = input("Do you want heads or tails?\n:")
+        newques = ques.lower()
+
+        if newques == 'heads':
+            qheads = True
+            break
+        if newques == 'tails':
+            qtails = True
+            break
+        if newques == 'end':
+            print ("Your operation has been stopped!")
+            stop = True
+            break
+
+    if stop == True:
+        break
+
+    if rannum == 1:
+        heads = True
+    if rannum == 2:
+        tails = True
+
+    if heads == True and qheads == True:
+        print ("You won! It was heads!")
+
+    if heads == False and qheads == True:
+        print ("You lost! It was tails!")
+
+    if tails == True and qtails == True:
+        print ("You won! It was tails!")
+
+    if tails == False and qtails == True:
+        print ("You lost! It was tails!")
 
 
-		if lower == "heads":
-			newanswer = "heads"
-			break
+    while True:
 
-		elif lower == "tails":
-			newanswer = "tails"
-			break
+        againq = input("Thank you for playing! Do you want to play again? (y or n)\n:")
 
-		elif answer == "end":
-			newanswer = 'end'
-			break
-
-		else:
-			print ("Try again please?")
-
-	number = randint(0,101)
-	key = number %2
-
-	if newanswer == 'end':
-		print ("Your game has been stopped!")
-		break
-
-	elif key == 1 and newanswer == "heads":
-		print ("It was Heads. You Won!")
-
-	elif key == 1 and newanswer != "heads":
-		print ("It was Heads. You Lost!")
-
-	elif key == 0 and newanswer == "tails":
-		print ("It was tails. You Won!")
-
-	elif key == 0 and newanswer != "tails":
-		print ("It was tails. You Lost!")
-
-	else:
-		print ("There was an error. Please Restart.")
-
-	gameend = input("Do you want to play again? (y or n)")
-
-	if gameend == "n":
-		break
+        if againq.lower() == 'y':
+            again = True
+            break
+        if againq.lower() == 'n':
+            again = False
+            break
