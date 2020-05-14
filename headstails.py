@@ -9,9 +9,9 @@ stop = False
 
 while again == True:
 
-    print ("Thank you for playing! Hope you enjoy the game.")
+    print("Thank you for playing! Hope you enjoy the game.")
 
-    rannum = randint(1,3)
+    rannum = randint(1, 3)
 
     while True:
 
@@ -25,7 +25,7 @@ while again == True:
             qtails = True
             break
         if newques == 'end':
-            print ("Your operation has been stopped!")
+            print("Your operation has been stopped!")
             stop = True
             break
 
@@ -38,21 +38,21 @@ while again == True:
         tails = True
 
     if heads == True and qheads == True:
-        print ("You won! It was heads!")
+        print("You won! It was heads!")
 
     if heads == False and qheads == True:
-        print ("You lost! It was tails!")
+        print("You lost! It was tails!")
 
     if tails == True and qtails == True:
-        print ("You won! It was tails!")
+        print("You won! It was tails!")
 
     if tails == False and qtails == True:
-        print ("You lost! It was tails!")
-
+        print("You lost! It was tails!")
 
     while True:
 
-        againq = input("Thank you for playing! Do you want to play again? (y or n)\n:")
+        againq = input(
+            "Thank you for playing! Do you want to play again? (y or n)\n:")
 
         if againq.lower() == 'y':
             again = True
