@@ -53,15 +53,22 @@ def anaimal_crackers(text):
 
 def makes_twenty(num1, num2):
 
-    if num1 == 20:
-        return True
-    elif num2 == 20:
-        return True
-    elif num1 + num2 == 20:
-        return True
-    elif num1 - num2 == 20:
-        return True
-    elif num2 - num1 == 20:
-        return True
-    else:
-        return False
+    return (num1+num2) == 20 or num1 == 20 or num2 == 20 or (num1-num2) == 20 or (num2-num1) == 20
+
+
+def old_macdonald(name):
+    firstn = name[0:3]
+    secondn = name[3::]
+
+    return firstn.capitalize() + secondn.capitalize()
+
+
+def master_yoda(sentence="We are ready"):
+    word_list = sentence.split()
+    reverse_word_list = word_list[::-1]
+    return " ".join(reverse_word_list)
+
+
+def almost_there(num):
+
+    return (abs(num-100)) <= 10 or (abs(num+100)) <= 10 or (abs(num-200)) <= 10 or (abs(num+200)) <= 10
