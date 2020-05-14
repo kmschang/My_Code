@@ -40,3 +40,28 @@ def lesser_of_two_evens(a, b):
         return min(a, b)
     else:
         return max(a, b)
+
+
+def anaimal_crackers(text):
+    '''
+    Tells you if the first letter of two words is the same.
+    '''
+    wordlist = text.split()
+
+    return wordlist[0].lower()[0] == wordlist[1].lower()[0]
+
+
+def makes_twenty(num1, num2):
+
+    if num1 == 20:
+        return True
+    elif num2 == 20:
+        return True
+    elif num1 + num2 == 20:
+        return True
+    elif num1 - num2 == 20:
+        return True
+    elif num2 - num1 == 20:
+        return True
+    else:
+        return False
