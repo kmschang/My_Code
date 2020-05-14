@@ -42,7 +42,7 @@ def lesser_of_two_evens(a, b):
         return max(a, b)
 
 
-def anaimal_crackers(text):
+def anaimal_crackers(text="test test"):
     '''
     Tells you if the first letter of two words is the same.
     '''
@@ -56,7 +56,7 @@ def makes_twenty(num1, num2):
     return (num1+num2) == 20 or num1 == 20 or num2 == 20 or (num1-num2) == 20 or (num2-num1) == 20
 
 
-def old_macdonald(name):
+def old_macdonald(name="macdonalds"):
     firstn = name[0:3]
     secondn = name[3::]
 
