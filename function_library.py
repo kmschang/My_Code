@@ -154,3 +154,16 @@ def minutes_old():
     secold = yearold + monthold + dayold
     minold = secold / 60
     return int((minold))
+
+
+def black_jack(num1, num2, num3):
+    if num1+num2+num3 > 21:
+        return 'Bust'
+    else:
+        return num1+num2+num3
+
+
+def check_even(num):
+    return num % 2 == 0
+
+
