@@ -10,3 +10,7 @@ print(lesser_of_two_evens(2, 4))
 
 def animal_crackers(input):
     input.split()
+
+age = '123456789'
+
+print(age[::-1])
