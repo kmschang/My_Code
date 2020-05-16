@@ -134,4 +134,3 @@ this_leap_time = leap_year_time()
 time_in_seconds = str(age_seconds+this_leap_time+this_year_seconds)
 
 print(thousand_seperator(time_in_seconds))
-
