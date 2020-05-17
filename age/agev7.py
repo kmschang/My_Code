@@ -8,33 +8,33 @@ def life_in_seconds():
         year = int(new_text[2])
 
         if month == 1:
-            month_in_seconds = 28857600
+            month_in_seconds = 31536000
         if month == 2:
-            month_in_seconds = 26265600
+            month_in_seconds = 28857600
         if month == 3:
-            month_in_seconds = 23587200
+            month_in_seconds = 26438400
         if month == 4:
-            month_in_seconds = 20995200
+            month_in_seconds = 23760000
         if month == 5:
-            month_in_seconds = 18316800
+            month_in_seconds = 21168000
         if month == 6:
-            month_in_seconds = 15638400
+            month_in_seconds = 18489600
         if month == 7:
-            month_in_seconds = 13046400
+            month_in_seconds = 15897600
         if month == 8:
-            month_in_seconds = 10368000
+            month_in_seconds = 13219200
         if month == 9:
-            month_in_seconds = 7776000
+            month_in_seconds = 10540800
         if month == 10:
-            month_in_seconds = 5097600
+            month_in_seconds = 7948800
         if month == 11:
-            month_in_seconds = 2678400
+            month_in_seconds = 5270400
         if month == 12:
-            month_in_seconds = 0
+            month_in_seconds = 2678400
 
         day_in_seconds = day * 86400
         year_in_seconds = ((2020-year)*31536000)
-        return (year_in_seconds+month_in_seconds+day_in_seconds)
+        return (year_in_seconds+month_in_seconds-day_in_seconds)
 
     def this_year_in_seconds():
         text = nowdate
@@ -98,9 +98,9 @@ def life_in_seconds():
         leap_times = leap_days * 86400
 
         if now_year % 4 == 0 and now_month < 3:
-            this_leap_time = 86400
-        if now_year % 4 == 0 and now_month >= 3:
             this_leap_time = 0
+        if now_year % 4 == 0 and now_month >= 3:
+            this_leap_time = 86400
         if now_year % 4 != 0:
             this_leap_time = 0
 
