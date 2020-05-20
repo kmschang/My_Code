@@ -1,1 +1,1 @@
-print((2020-1969)//4)
+print ("I don't have python 3 so I can't run any of these programs")
