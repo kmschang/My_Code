@@ -1,1 +1,1 @@
-print ("I don't have python 3 so I can't run any of these programs")
+print ("Dad is the bomb.")
