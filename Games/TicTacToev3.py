@@ -264,40 +264,56 @@ display_board()
 turns()
 print_title()
 display_board()
-check_for_win('X')
-check_for_win('O')
-#play 6
-computer_going_to_win()
-if check_turn() == False:
-    computer_going_to_block()
-if check_turn() == False:
-    computer_turn()
-poor_man_clear()
-print_title()
-display_board()
-check_for_win('X')
-check_for_win('O')
-#play 7
-turns()
-print_title()
-display_board()
-check_for_win('X')
-check_for_win('O')
-#play 8
-computer_going_to_win()
-if check_turn() == False:
-    computer_going_to_block()
-if check_turn() == False:
-    computer_turn()
-poor_man_clear()
-print_title()
-display_board()
-check_for_win('X')
-check_for_win('O')
-#play 9
-turns()
-poor_man_clear()
-print_title()
-display_board()
-check_for_win('X')
-check_for_win('O')
+if check_for_win('X') == True:
+    pass
+else:
+    if check_for_win('O') == True:
+        pass
+    else:
+        #play 6
+        computer_going_to_win()
+        if check_turn() == False:
+            computer_going_to_block()
+        if check_turn() == False:
+            computer_turn()
+        poor_man_clear()
+        print_title()
+        display_board()
+        if check_for_win('X') == True:
+            pass
+        else:
+            if check_for_win('O') == True:
+                pass
+            else:
+                #play 7
+                turns()
+                print_title()
+                display_board()
+                if check_for_win('X') == True:
+                    pass
+                else:
+                    if check_for_win('O') == True:
+                        pass
+                    else:
+                        #play 8
+                        computer_going_to_win()
+                        if check_turn() == False:
+                            computer_going_to_block()
+                        if check_turn() == False:
+                            computer_turn()
+                        poor_man_clear()
+                        print_title()
+                        display_board()
+                        if check_for_win('X') == True:
+                            pass
+                        else:
+                            if check_for_win('O') == True:
+                                pass
+                            else:
+                                #play 9
+                                turns()
+                                poor_man_clear()
+                                print_title()
+                                display_board()
+                                check_for_win('X')
+                                check_for_win('O')
