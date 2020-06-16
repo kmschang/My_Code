@@ -61,7 +61,45 @@ def first_move():
     else:
         board[1][1] = computer
 
+def computer_turn():
+    for x in range(3):
+        count = 0
+        for y in range(3):
+            if board[x][y] == player:
+                count += 1
+        if count == 2 and board[x][y] == ' ':
+            board[x][y] = computer
+    playercount = 0
+    done = False
+    comcount = 0
+    for x in range(3):
+        for y in range(3):
+            if board[x][y] == player:
+                playercount += 1
+            if board[x][y] == computer:
+                comcount += 1
+    if comcount == playercount - 1:
+        for x in range(3):
+            for y in range(3):
+                if board[x][y] == ' ':
+                    board[x][y] = computer
+                    done = True
+                    break
+                if done == True:
+                    break
+            if done == True:
+                break
+    else:
+        pass
 
+def turns():
+    turn = int(
+        input(f"Where would you like to place your {player}? (1-9)?\n:"))
+
+    turn -= 1
+    col = turn//3
+    row = turn % 3
+    board[col][row] = player
 
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
@@ -79,15 +117,6 @@ while True:
         break
 
 
-def turns():
-    turn = int(input(f"Where would you like to place your {player}? (1-9)?\n:"))
-
-    turn -= 1
-    col = turn//3
-    row = turn %3
-
-    board[col][row] = player
-
 display_board()
 # Player 1 turn 1
 turns()
@@ -104,21 +133,7 @@ display_board()
 check_for_win('X')
 check_for_win('O')
 #Computer turn 2
-for x in range(3):
-    count = 0
-    for y in range(3):
-        if board[x][y] == player:
-            count += 1
-    if count == 2 and board[x][y] == ' ':
-        board[x][y] = computer
-    if count != 2:
-        for x in range(3):
-            for y in range(3):
-                if board[x][y] == ' ':
-                    board[x][y] = computer
-                    break
-                break
-            break
+computer_turn()
 display_board()
 check_for_win('X')
 check_for_win('O')
@@ -128,4 +143,7 @@ display_board()
 check_for_win('X')
 check_for_win('O')
 #computer turn 3
-
+computer_turn()
+display_board()
+check_for_win("X")
+check_for_win("O")
