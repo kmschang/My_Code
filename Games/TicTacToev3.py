@@ -183,12 +183,19 @@ def computer_going_to_block():
         return False
 
 def turns():
-    turn = int(input(f"Where would you like to place your {player}? (1-9)?\n:"))
+    while True:
+        while True:
+            turn = input(f"Where would you like to place your {player}? (1-9)?\n:")
+            if turn.isdigit() == True:
+                turn = int(turn)
+                break
 
-    turn -= 1
-    col = turn//3
-    row = turn % 3
-    board[col][row] = player
+        turn -= 1
+        col = turn//3
+        row = turn % 3
+        if board[col][row] == ' ':
+            board[col][row] = player
+            break
 
 def check_turn():
     playercount = 0
@@ -220,20 +227,26 @@ while True:
         break
 
 display_board()
+#play 1
 turns()
 display_board()
+#play 2
 first_move()
 display_board()
+#play 3
 turns()
 display_board()
+#play4
 computer_going_to_win()
 computer_going_to_block()
 computer_turn()
 display_board()
+#play 5
 turns()
 display_board()
 check_for_win('X')
 check_for_win('O')
+#play 6
 computer_going_to_win()
 if check_turn() == False:
     computer_going_to_block()
@@ -242,15 +255,22 @@ if check_turn() == False:
 display_board()
 check_for_win('X')
 check_for_win('O')
+#play 7
 turns()
 display_board()
 check_for_win('X')
 check_for_win('O')
+#play 8
 computer_going_to_win()
 if check_turn() == False:
     computer_going_to_block()
 if check_turn() == False:
     computer_turn()
+display_board()
+check_for_win('X')
+check_for_win('O')
+#play 9
+turns()
 display_board()
 check_for_win('X')
 check_for_win('O')
