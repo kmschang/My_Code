@@ -1,10 +1,15 @@
-letter = 'X'
-print(f"\u001b[31;1m{letter}")
-print(f"\u001b[31;0m{letter}")
+def loading2():
+    import sys
+    import time
+    print("Loading progress bar...")
+    for i in range(0, 100):
+        time.sleep(0.05)
+        width = (i + 1) / 4
+        bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
+        sys.stdout.write(u"\u001b[1000D" + bar)
+        sys.stdout.flush()
+    print("\n")
 
-board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+loading2()
 
-from random import randint
-
-while True:
-    print(randint(0,2))
+print("Hello")

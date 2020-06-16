@@ -58,7 +58,7 @@ loading1()
 def loading2():
     print("Loading progress bar...")
     for i in range(0, 100):
-        time.sleep(0.1)
+        time.sleep(0.01)
         width = (i + 1) / 4
         bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
         sys.stdout.write(u"\u001b[1000D" +  bar)
