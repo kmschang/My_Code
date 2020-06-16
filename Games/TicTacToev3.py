@@ -220,100 +220,119 @@ def print_title():
     print(' | ''  '' | ''  ''|__''   '' | ''  ''| |''  ''|__''   '' | ''  ''|_|''  ''|__ ')
     print("\n"*2)
 
+def clear_board():
+    for x in range(3):
+        for y in range(3):
+            board[x][y] = ' '
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
-poor_man_clear()
-print_title()
-display_board()
+play_again = True
 
-while True:
-    xoro = input("Do you want 'x' or 'o'?\n:")
-    if xoro.lower() == 'x':
-        player = 'X'
-        computer = 'O'
-        break
-    if xoro.lower() == 'o':
-        player = 'O'
-        computer = 'X'
-        break
+while play_again == True:
+    clear_board()
+    poor_man_clear()
+    print_title()
+    display_board()
 
-poor_man_clear()
-print_title()
-display_board()
-#play 1
-turns()
-print_title()
-display_board()
-#play 2
-first_move()
-poor_man_clear()
-print_title()
-display_board()
-#play 3
-turns()
-print_title()
-display_board()
-#play4
-computer_going_to_win()
-computer_going_to_block()
-computer_turn()
-poor_man_clear()
-print_title()
-display_board()
-#play 5
-turns()
-print_title()
-display_board()
-if check_for_win('X') == True:
-    pass
-else:
-    if check_for_win('O') == True:
-        pass
+    while True:
+        xoro = input("Do you want 'x' or 'o'?\n:")
+        if xoro.lower() == 'x':
+            player = 'X'
+            computer = 'O'
+            break
+        if xoro.lower() == 'o':
+            player = 'O'
+            computer = 'X'
+            break
+
+    poor_man_clear()
+    print_title()
+    display_board()
+    #play 1
+    turns()
+    print_title()
+    display_board()
+    #play 2
+    first_move()
+    poor_man_clear()
+    print_title()
+    display_board()
+    #play 3
+    turns()
+    print_title()
+    display_board()
+    #play4
+    computer_going_to_win()
+    computer_going_to_block()
+    computer_turn()
+    poor_man_clear()
+    print_title()
+    display_board()
+    #play 5
+    turns()
+    print_title()
+    display_board()
+    if check_for_win('X') == True:
+        again = input("Do you want to play again? (y or n)?\n:")
     else:
-        #play 6
-        computer_going_to_win()
-        if check_turn() == False:
-            computer_going_to_block()
-        if check_turn() == False:
-            computer_turn()
-        poor_man_clear()
-        print_title()
-        display_board()
-        if check_for_win('X') == True:
-            pass
+        if check_for_win('O') == True:
+            again = input("Do you want to play again? (y or n)?\n:")
         else:
-            if check_for_win('O') == True:
-                pass
+            #play 6
+            computer_going_to_win()
+            if check_turn() == False:
+                computer_going_to_block()
+            if check_turn() == False:
+                computer_turn()
+            poor_man_clear()
+            print_title()
+            display_board()
+            if check_for_win('X') == True:
+                again = input("Do you want to play again? (y or n)?\n:")
             else:
-                #play 7
-                turns()
-                print_title()
-                display_board()
-                if check_for_win('X') == True:
-                    pass
+                if check_for_win('O') == True:
+                    again = input("Do you want to play again? (y or n)?\n:")
                 else:
-                    if check_for_win('O') == True:
-                        pass
+                    #play 7
+                    turns()
+                    print_title()
+                    display_board()
+                    if check_for_win('X') == True:
+                        again = input("Do you want to play again? (y or n)?\n:")
                     else:
-                        #play 8
-                        computer_going_to_win()
-                        if check_turn() == False:
-                            computer_going_to_block()
-                        if check_turn() == False:
-                            computer_turn()
-                        poor_man_clear()
-                        print_title()
-                        display_board()
-                        if check_for_win('X') == True:
-                            pass
+                        if check_for_win('O') == True:
+                            again = input(
+                                "Do you want to play again? (y or n)?\n:")
                         else:
-                            if check_for_win('O') == True:
-                                pass
+                            #play 8
+                            computer_going_to_win()
+                            if check_turn() == False:
+                                computer_going_to_block()
+                            if check_turn() == False:
+                                computer_turn()
+                            poor_man_clear()
+                            print_title()
+                            display_board()
+                            if check_for_win('X') == True:
+                                again = input(
+                                    "Do you want to play again? (y or n)?\n:")
                             else:
-                                #play 9
-                                turns()
-                                poor_man_clear()
-                                print_title()
-                                display_board()
-                                check_for_win('X')
-                                check_for_win('O')
+                                if check_for_win('O') == True:
+                                    again = input(
+                                        "Do you want to play again? (y or n)?\n:")
+                                else:
+                                    #play 9
+                                    turns()
+                                    poor_man_clear()
+                                    print_title()
+                                    display_board()
+                                    check_for_win('X')
+                                    check_for_win('O')
+                                    again = input(
+                                        "Do you want to play again? (y or n)?\n:")
+
+    if again.lower() == 'y':
+        play_again = True
+    if again.lower() == 'n':
+        play_again = False
