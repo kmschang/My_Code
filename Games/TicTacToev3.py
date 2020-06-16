@@ -402,5 +402,3 @@ while play_again == True:
                                         if again.lower() == 'n':
                                             play_again = False
                                             break
-
-
