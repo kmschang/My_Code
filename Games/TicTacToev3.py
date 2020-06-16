@@ -53,7 +53,7 @@ def numtocol(num):
 
 def first_move():
     if board[1][1] != ' ':
-        board[2][0] = computer
+        board[0][2] = computer
     else:
         board[1][1] = computer
 
@@ -119,17 +119,40 @@ def computer_going_to_win():
                 board[y-2][x] = computer
             if placed == True:
                 return True
+    if placed == True:
+        return True
     if placed == False:
         count = 0
         for x in range(3):
             if board[x][x] == computer:
                 count += 1
         if count == 2 and board[x][x] == ' ':
+            placed = True
             board[x][x] = computer
         if count == 2 and board [x-1][x-1] == ' ':
+            placed = True
             board[x-1][x-1] = computer
         if count == 2 and board[x-2][x-2] == ' ':
+            placed = True
             board[x-2][x-2] = computer
+    if placed == True:
+        return True
+    if placed == False:
+        count = 0
+        for x in range(3):
+            if board[x][2-x] == computer:
+                count += 1
+        if count == 2 and board[x][2-x] == ' ':
+            placed = True
+            board[x][2-x] = computer
+        if count == 2 and board[abs(x-1)][2-(abs(x-1))] == ' ':
+            placed = True
+            board[abs(x-1)][2-(abs(x-1))] = computer
+        if count == 2 and board[abs(x-2)][2-(abs(x-2))] == ' ':
+            placed = True
+            board[abs(x-2)][2-(abs(x-2))] = computer
+    if placed == True:
+        return True
     if placed == False:
         return False
 
@@ -172,17 +195,38 @@ def computer_going_to_block():
                 board[y-2][x] = computer
             if placed == True:
                 return True
+    if placed == True:
+        return True
     if placed == False:
         count = 0
         for x in range(3):
             if board[x][x] == player:
                 count += 1
         if count == 2 and board[x][x] == ' ':
+            placed = True
             board[x][x] = computer
         if count == 2 and board[x-1][x-1] == ' ':
+            placed = True
             board[x-1][x-1] = computer
         if count == 2 and board[x-2][x-2] == ' ':
+            placed = True
             board[x-2][x-2] = computer
+    if placed == True:
+        return True
+    if placed == False:
+        count = 0
+        for x in range(3):
+            if board[x][2-x] == player:
+                count += 1
+        if count == 2 and board[x][2-x] == ' ':
+            placed = True
+            board[x][2-x] = computer
+        if count == 2 and board[abs(x-1)][2-(abs(x-1))] == ' ':
+            placed = True
+            board[abs(x-1)][2-(abs(x-1))] = computer
+        if count == 2 and board[abs(x-2)][2-(abs(x-2))] == ' ':
+            placed = True
+            board[abs(x-2)][2-(abs(x-2))] = computer
     if placed == False:
         return False
 
@@ -261,6 +305,7 @@ board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 play_again = True
 
 while play_again == True:
+    play_again = False
     clear_board()
     poor_man_clear()
     print_title()
@@ -308,13 +353,27 @@ while play_again == True:
         poor_man_clear()
         x_won()
         thank_you()
-        again = input("Do you want to play again? (y or n)?\n:")
+        while True:
+            again = input("Do you want to play again? (y or n)?\n:")
+            if again.lower() == 'y':
+                play_again = True
+                break
+            if again.lower() == 'n':
+                play_again = False
+                break
     else:
         if check_for_win('O') == True:
             poor_man_clear()
             o_won()
             thank_you()
-            again = input("Do you want to play again? (y or n)?\n:")
+            while True:
+                again = input("Do you want to play again? (y or n)?\n:")
+                if again.lower() == 'y':
+                    play_again = True
+                    break
+                if again.lower() == 'n':
+                    play_again = False
+                    break
         else:
             #play 6
             computer_going_to_win()
@@ -329,13 +388,27 @@ while play_again == True:
                 poor_man_clear()
                 x_won()
                 thank_you()
-                again = input("Do you want to play again? (y or n)?\n:")
+                while True:
+                    again = input("Do you want to play again? (y or n)?\n:")
+                    if again.lower() == 'y':
+                        play_again = True
+                        break
+                    if again.lower() == 'n':
+                        play_again = False
+                        break
             else:
                 if check_for_win('O') == True:
                     poor_man_clear()
                     o_won()
                     thank_you()
-                    again = input("Do you want to play again? (y or n)?\n:")
+                    while True:
+                        again = input("Do you want to play again? (y or n)?\n:")
+                        if again.lower() == 'y':
+                            play_again = True
+                            break
+                        if again.lower() == 'n':
+                            play_again = False
+                            break
                 else:
                     #play 7
                     turns()
@@ -345,14 +418,29 @@ while play_again == True:
                         poor_man_clear()
                         x_won()
                         thank_you()
-                        again = input("Do you want to play again? (y or n)?\n:")
+                        while True:
+                            again = input(
+                                "Do you want to play again? (y or n)?\n:")
+                            if again.lower() == 'y':
+                                play_again = True
+                                break
+                            if again.lower() == 'n':
+                                play_again = False
+                                break
                     else:
                         if check_for_win('O') == True:
                             poor_man_clear()
                             o_won()
                             thank_you()
-                            again = input(
-                                "Do you want to play again? (y or n)?\n:")
+                            while True:
+                                again = input(
+                                    "Do you want to play again? (y or n)?\n:")
+                                if again.lower() == 'y':
+                                    play_again = True
+                                    break
+                                if again.lower() == 'n':
+                                    play_again = False
+                                    break
                         else:
                             #play 8
                             computer_going_to_win()
@@ -367,15 +455,29 @@ while play_again == True:
                                 poor_man_clear()
                                 x_won()
                                 thank_you()
-                                again = input(
-                                    "Do you want to play again? (y or n)?\n:")
+                                while True:
+                                    again = input(
+                                        "Do you want to play again? (y or n)?\n:")
+                                    if again.lower() == 'y':
+                                        play_again = True
+                                        break
+                                    if again.lower() == 'n':
+                                        play_again = False
+                                        break
                             else:
                                 if check_for_win('O') == True:
                                     poor_man_clear()
                                     o_won()
                                     thank_you()
-                                    again = input(
-                                        "Do you want to play again? (y or n)?\n:")
+                                    while True:
+                                        again = input(
+                                            "Do you want to play again? (y or n)?\n:")
+                                        if again.lower() == 'y':
+                                            play_again = True
+                                            break
+                                        if again.lower() == 'n':
+                                            play_again = False
+                                            break
                                 else:
                                     #play 9
                                     turns()
@@ -396,12 +498,12 @@ while play_again == True:
                                         print('\n')
                                         tie()
                                         thank_you()
-                                    while True:
-                                        again = input(
-                                            "Do you want to play again? (y or n)?\n:")
-                                        if again.lower() == 'y':
-                                            play_again = True
-                                            break
-                                        if again.lower() == 'n':
-                                            play_again = False
-                                            break
+                                        while True:
+                                            again = input(
+                                                "Do you want to play again? (y or n)?\n:")
+                                            if again.lower() == 'y':
+                                                play_again = True
+                                                break
+                                            if again.lower() == 'n':
+                                                play_again = False
+                                                break
