@@ -214,9 +214,16 @@ def check_turn():
 def poor_man_clear():
     print('\n'*100)
 
+def print_title():
+    print('___''  ''   ''  ''___''   ''___''  '' _ ''  ''___''   ''___''  '' _ ''  '' __ ')
+    print(' | ''  '' | ''  ''|  ''   '' | ''  ''|-|''  ''|  ''   '' | ''  ''| |''  ''|__ ')
+    print(' | ''  '' | ''  ''|__''   '' | ''  ''| |''  ''|__''   '' | ''  ''|_|''  ''|__ ')
+    print("\n"*2)
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 poor_man_clear()
+print_title()
 display_board()
 
 while True:
@@ -231,25 +238,31 @@ while True:
         break
 
 poor_man_clear()
+print_title()
 display_board()
 #play 1
 turns()
+print_title()
 display_board()
 #play 2
 first_move()
 poor_man_clear()
+print_title()
 display_board()
 #play 3
 turns()
+print_title()
 display_board()
 #play4
 computer_going_to_win()
 computer_going_to_block()
 computer_turn()
 poor_man_clear()
+print_title()
 display_board()
 #play 5
 turns()
+print_title()
 display_board()
 check_for_win('X')
 check_for_win('O')
@@ -260,11 +273,13 @@ if check_turn() == False:
 if check_turn() == False:
     computer_turn()
 poor_man_clear()
+print_title()
 display_board()
 check_for_win('X')
 check_for_win('O')
 #play 7
 turns()
+print_title()
 display_board()
 check_for_win('X')
 check_for_win('O')
@@ -275,12 +290,14 @@ if check_turn() == False:
 if check_turn() == False:
     computer_turn()
 poor_man_clear()
+print_title()
 display_board()
 check_for_win('X')
 check_for_win('O')
 #play 9
 turns()
 poor_man_clear()
+print_title()
 display_board()
 check_for_win('X')
 check_for_win('O')
