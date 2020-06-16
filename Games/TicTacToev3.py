@@ -188,8 +188,9 @@ def turns():
         while True:
             turn = input(f"Where would you like to place your {player}? (1-9)?\n:")
             if turn.isdigit() == True:
-                turn = int(turn)
-                break
+                if 0 < int(turn) < 10:
+                    turn = int(turn)
+                    break
 
         turn -= 1
         col = turn//3
@@ -392,10 +393,14 @@ while play_again == True:
                                         print('\n')
                                         tie()
                                         thank_you()
-                                    again = input(
-                                        "Do you want to play again? (y or n)?\n:")
+                                    while True:
+                                        again = input(
+                                            "Do you want to play again? (y or n)?\n:")
+                                        if again.lower() == 'y':
+                                            play_again = True
+                                            break
+                                        if again.lower() == 'n':
+                                            play_again = False
+                                            break
 
-    if again.lower() == 'y':
-        play_again = True
-    if again.lower() == 'n':
-        play_again = False
+
