@@ -39,36 +39,17 @@ def check_for_win(letter):
         if count3 == 3:
             print(f"{letter} won!")
 
-def check_going_to_win(letter):
-    letter = letter.upper()
-    for x in range(3):
-        count = 0
-        for y in range(3):
-            if board[x][y] == letter:
-                count += 1
-        if count == 2:
-            y = y + 1
-            board[x][y] = player
-
 def numtocol(num):
     num -= 1
     return([num//3,num % 3])
 
 def first_move():
-    from random import randint
     if board[1][1] != ' ':
-        board[2][2] = computer
+        board[2][0] = computer
     else:
         board[1][1] = computer
 
 def computer_turn():
-    for x in range(3):
-        count = 0
-        for y in range(3):
-            if board[x][y] == player:
-                count += 1
-        if count == 2 and board[x][y] == ' ':
-            board[x][y] = computer
     playercount = 0
     done = False
     comcount = 0
@@ -92,9 +73,91 @@ def computer_turn():
     else:
         pass
 
+def computer_going_to_win():
+    placed = False
+    for x in range(3):
+        count = 0
+        for y in range(3):
+            if board[x][y] == computer:
+                count += 1
+        if count == 2 and board[x][y] == ' ':
+            placed = True
+            board[x][y] = computer
+        if count == 2 and board[x][y-1] == ' ':
+            placed = True
+            board[x][y-1] = computer
+        if count == 2 and board[x][y-2] == ' ':
+            placed = True
+            board[x][y-2] = computer
+        if placed == True:
+            break
+    if placed == True:
+        return True
+    if placed == False:
+        count = 0
+        for x in range(3):
+            count = 0
+            for y in range(3):
+                if board[y][x] == computer:
+                    count += 1
+            if count == 2 and board[y][x] == ' ':
+                placed = True
+                board[y][x] = computer
+            if count == 2 and board[y-1][x] == ' ':
+                placed = True
+                board[y-1][x] = computer
+            if count == 2 and board[y-2][x] == ' ':
+                placed = True
+                board[y-2][x] = computer
+            if placed == True:
+                return True
+    if placed == False:
+        return False
+
+def computer_goint_to_block():
+    placed = False
+    count = 0
+    for x in range(3):
+        count = 0
+        for y in range(3):
+            if board[x][y] == player:
+                count += 1
+        if count == 2 and board[x][y] == ' ':
+            placed = True
+            board[x][y] = computer
+        if count == 2 and board[x][y-1] == ' ':
+            placed = True
+            board[x][y-1] = computer
+        if count == 2 and board[x][y-2] == ' ':
+            placed = True
+            board[x][y-2] = computer
+        if placed == True:
+            break
+    if placed == True:
+        return True
+    if placed == False:
+        count = 0
+        for x in range(3):
+            count = 0
+            for y in range(3):
+                if board[y][x] == player:
+                    count += 1
+            if count == 2 and board[y][x] == ' ':
+                placed = True
+                board[y][x] = computer
+            if count == 2 and board[y-1][x] == ' ':
+                placed = True
+                board[y-1][x] = computer
+            if count == 2 and board[y-2][x] == ' ':
+                placed = True
+                board[y-2][x] = computer
+            if placed == True:
+                return True
+    if placed == False:
+        return False
+
 def turns():
-    turn = int(
-        input(f"Where would you like to place your {player}? (1-9)?\n:"))
+    turn = int(input(f"Where would you like to place your {player}? (1-9)?\n:"))
 
     turn -= 1
     col = turn//3
@@ -116,34 +179,24 @@ while True:
         computer = 'X'
         break
 
-
 display_board()
-# Player 1 turn 1
 turns()
-check_for_win('X')
-check_for_win('O')
-#Computer turn 1
+display_board()
 first_move()
 display_board()
-check_for_win('X')
-check_for_win('O')
-#Player 1 turn 2
+turns()
+display_board()
+computer_going_to_win()
+computer_goint_to_block()
+computer_turn()
+display_board()
 turns()
 display_board()
 check_for_win('X')
 check_for_win('O')
-#Computer turn 2
+computer_going_to_win()
+computer_goint_to_block()
 computer_turn()
 display_board()
 check_for_win('X')
 check_for_win('O')
-#player 1 turn 3
-turns()
-display_board()
-check_for_win('X')
-check_for_win('O')
-#computer turn 3
-computer_turn()
-display_board()
-check_for_win("X")
-check_for_win("O")
