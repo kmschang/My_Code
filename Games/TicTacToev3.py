@@ -8,9 +8,9 @@ def display_board():
         for row in range(3):
             print(board[col][row], end='')
             if row != 2:
-                print(' | ', end='')
+                print('\u001b[31;0m | ', end='')
             if row == 2 and col != 2:
-                print('\n---------\n', end='')
+                print('\u001b[31;0m\n---------\n', end='')
             if col == 2 and row == 2:
                 print('\n')
 
@@ -318,10 +318,12 @@ while play_again == True:
     clear_board()
     poor_man_clear()
     print_title()
+    board = [['\u001b[31;1m1', '\u001b[31;1m2', '\u001b[31;1m3'],
+             ['\u001b[31;1m4', '\u001b[31;1m5', '\u001b[31;1m6'], ['\u001b[31;1m7', '\u001b[31;1m8', '\u001b[31;1m9']]
     display_board()
 
     while True:
-        xoro = input("Do you want 'x' or 'o'?\n:")
+        xoro = input("\u001b[31;0mDo you want 'x' or 'o'?\n:")
         if xoro.lower() == 'x':
             player = 'X'
             computer = 'O'
@@ -331,6 +333,7 @@ while play_again == True:
             computer = 'X'
             break
 
+    clear_board()
     poor_man_clear()
     print_title()
     display_board()
