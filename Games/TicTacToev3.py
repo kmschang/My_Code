@@ -1,4 +1,5 @@
 from random import randint
+
 def coltonum(x,y):
     return (x*3) + y
 
@@ -225,6 +226,26 @@ def clear_board():
         for y in range(3):
             board[x][y] = ' '
 
+def thank_you():
+    print('___''  ''   ''  '' _ ''  ''    ''  ''   ''   ''   ''  '' _ ''  ''   ')
+    print(' | ''  ''|_|''  ''|_|''  ''|\ |''  ''|/ ''   ''\_/''  ''| |''  ''| |')
+    print(' | ''  ''| |''  ''| |''  ''| \|''  ''|\ ''   '' | ''  ''|_|''  ''|_|')
+    print('\n')
+
+def o_won():
+    display_board()
+    print(' _ ''   ''        ''  '' _ ''  ''    ')
+    print('| |''   ''\  /\  /''  ''| |''  ''|\ |')
+    print('|_|''   '' \/  \/ ''  ''|_|''  ''| \|')
+    print('\n')
+
+def x_won():
+    display_board()
+    print('   ''   ''        ''  '' _ ''  ''    ')
+    print('\ / ''  ''\  /\  /''  ''| |''  ''|\ |')
+    print('/ \'    '' \/  \/ ''  ''|_|''  ''| \|')
+    print('\n')
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 play_again = True
@@ -274,9 +295,15 @@ while play_again == True:
     print_title()
     display_board()
     if check_for_win('X') == True:
+        poor_man_clear()
+        x_won()
+        thank_you()
         again = input("Do you want to play again? (y or n)?\n:")
     else:
         if check_for_win('O') == True:
+            poor_man_clear()
+            o_won()
+            thank_you()
             again = input("Do you want to play again? (y or n)?\n:")
         else:
             #play 6
@@ -289,9 +316,15 @@ while play_again == True:
             print_title()
             display_board()
             if check_for_win('X') == True:
+                poor_man_clear()
+                x_won()
+                thank_you()
                 again = input("Do you want to play again? (y or n)?\n:")
             else:
                 if check_for_win('O') == True:
+                    poor_man_clear()
+                    o_won()
+                    thank_you()
                     again = input("Do you want to play again? (y or n)?\n:")
                 else:
                     #play 7
@@ -299,9 +332,15 @@ while play_again == True:
                     print_title()
                     display_board()
                     if check_for_win('X') == True:
+                        poor_man_clear()
+                        x_won()
+                        thank_you()
                         again = input("Do you want to play again? (y or n)?\n:")
                     else:
                         if check_for_win('O') == True:
+                            poor_man_clear()
+                            o_won()
+                            thank_you()
                             again = input(
                                 "Do you want to play again? (y or n)?\n:")
                         else:
@@ -315,10 +354,16 @@ while play_again == True:
                             print_title()
                             display_board()
                             if check_for_win('X') == True:
+                                poor_man_clear()
+                                x_won()
+                                thank_you()
                                 again = input(
                                     "Do you want to play again? (y or n)?\n:")
                             else:
                                 if check_for_win('O') == True:
+                                    poor_man_clear()
+                                    o_won()
+                                    thank_you()
                                     again = input(
                                         "Do you want to play again? (y or n)?\n:")
                                 else:
@@ -327,8 +372,14 @@ while play_again == True:
                                     poor_man_clear()
                                     print_title()
                                     display_board()
-                                    check_for_win('X')
-                                    check_for_win('O')
+                                    if check_for_win('X') == True:
+                                        poor_man_clear()
+                                        x_won()
+                                        thank_you()
+                                    if check_for_win('O') == True:
+                                        poor_man_clear()
+                                        o_won()
+                                        thank_you()
                                     again = input(
                                         "Do you want to play again? (y or n)?\n:")
 
