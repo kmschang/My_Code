@@ -52,10 +52,19 @@ def numtocol(num):
     return([num//3,num % 3])
 
 def first_move():
-    if board[1][1] != ' ':
-        board[0][2] = computer
+    rand1 = randint(0,2)
+    rand2 = randint(0,2)
+    rand3 = randint(0,2)
+    while rand2 == rand3:
+        rand3 = randint(0,2)
+
+    if board[rand1][rand2] != ' ':
+        if board[rand2][rand1] != ' ':
+            board[rand2][rand3] = computer
+        else:
+            board[rand2][rand1] = computer
     else:
-        board[1][1] = computer
+        board[rand1][rand2] = computer
 
 def computer_turn():
     playercount = 0
