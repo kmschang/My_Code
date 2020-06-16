@@ -246,6 +246,12 @@ def x_won():
     print(r'/ \ '' ''   '' 'r' \/  \/ ''  'r'|_|''  'r'| \|')
     print('\n')
 
+def tie():
+    print('___''  ''   ''  ''___')
+    print(' | ''  '' | ''  ''|__')
+    print(' | ''  '' | ''  ''|__')
+    print('\n')
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 play_again = True
@@ -379,6 +385,12 @@ while play_again == True:
                                     if check_for_win('O') == True:
                                         poor_man_clear()
                                         o_won()
+                                        thank_you()
+                                    else:
+                                        poor_man_clear()
+                                        display_board()
+                                        print('\n')
+                                        tie()
                                         thank_you()
                                     again = input(
                                         "Do you want to play again? (y or n)?\n:")
