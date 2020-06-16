@@ -129,7 +129,7 @@ def computer_going_to_win():
     if placed == False:
         return False
 
-def computer_goint_to_block():
+def computer_going_to_block():
     placed = False
     count = 0
     for x in range(3):
@@ -227,7 +227,7 @@ display_board()
 turns()
 display_board()
 computer_going_to_win()
-computer_goint_to_block()
+computer_going_to_block()
 computer_turn()
 display_board()
 turns()
@@ -236,7 +236,7 @@ check_for_win('X')
 check_for_win('O')
 computer_going_to_win()
 if check_turn() == False:
-    computer_goint_to_block()
+    computer_going_to_block()
 if check_turn() == False:
     computer_turn()
 display_board()
@@ -248,7 +248,7 @@ check_for_win('X')
 check_for_win('O')
 computer_going_to_win()
 if check_turn() == False:
-    computer_goint_to_block()
+    computer_going_to_block()
 if check_turn() == False:
     computer_turn()
 display_board()
