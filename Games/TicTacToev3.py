@@ -21,6 +21,7 @@ def check_for_win(letter):
                 count += 1
         if count == 3:
             print (f"{letter} won!")
+            return True
     for x in range(3):
         count = 0
         for y in range(3):
@@ -28,16 +29,19 @@ def check_for_win(letter):
                 count += 1
         if count == 3:
             print (f"{letter} won!")
+            return True
     for x in range(3):
         if board[x][x] == letter:
             count2 += 1
         if count2 == 3:
             print(f"{letter} won!")
+            return True
     for x in range(3):
         if board[x][2-x] == letter:
             count3 += 1
         if count3 == 3:
             print(f"{letter} won!")
+            return True
 
 def numtocol(num):
     num -= 1
@@ -164,6 +168,20 @@ def turns():
     row = turn % 3
     board[col][row] = player
 
+def check_turn():
+    playercount = 0
+    comcount = 0
+    for x in range(3):
+        for y in range(3):
+            if board[x][y] == player:
+                playercount += 1
+            if board[x][y] == computer:
+                comcount += 1
+    if comcount == playercount:
+        return True
+    else:
+        return False
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 display_board()
@@ -195,8 +213,10 @@ display_board()
 check_for_win('X')
 check_for_win('O')
 computer_going_to_win()
-computer_goint_to_block()
-computer_turn()
+if check_turn() == False:
+    computer_goint_to_block()
+if check_turn() == False:
+    computer_turn()
 display_board()
 check_for_win('X')
 check_for_win('O')
