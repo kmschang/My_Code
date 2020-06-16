@@ -116,6 +116,17 @@ def computer_going_to_win():
             if placed == True:
                 return True
     if placed == False:
+        count = 0
+        for x in range(3):
+            if board[x][x] == computer:
+                count += 1
+        if count == 2 and board[x][x] == ' ':
+            board[x][x] = computer
+        if count == 2 and board [x-1][x-1] == ' ':
+            board[x-1][x-1] = computer
+        if count == 2 and board[x-2][x-2] == ' ':
+            board[x-2][x-2] = computer
+    if placed == False:
         return False
 
 def computer_goint_to_block():
@@ -157,6 +168,17 @@ def computer_goint_to_block():
                 board[y-2][x] = computer
             if placed == True:
                 return True
+    if placed == False:
+        count = 0
+        for x in range(3):
+            if board[x][x] == player:
+                count += 1
+        if count == 2 and board[x][x] == ' ':
+            board[x][x] = computer
+        if count == 2 and board[x-1][x-1] == ' ':
+            board[x-1][x-1] = computer
+        if count == 2 and board[x-2][x-2] == ' ':
+            board[x-2][x-2] = computer
     if placed == False:
         return False
 
@@ -208,6 +230,18 @@ computer_going_to_win()
 computer_goint_to_block()
 computer_turn()
 display_board()
+turns()
+display_board()
+check_for_win('X')
+check_for_win('O')
+computer_going_to_win()
+if check_turn() == False:
+    computer_goint_to_block()
+if check_turn() == False:
+    computer_turn()
+display_board()
+check_for_win('X')
+check_for_win('O')
 turns()
 display_board()
 check_for_win('X')
