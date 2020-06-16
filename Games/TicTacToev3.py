@@ -9,7 +9,10 @@ def display_board():
             print(board[col][row], end='')
             if row != 2:
                 print(' | ', end='')
-        print('\n')
+            if row == 2 and col != 2:
+                print('\n---------\n', end='')
+            if col == 2 and row == 2:
+                print('\n')
 
 def check_for_win(letter):
     letter = letter.upper()
