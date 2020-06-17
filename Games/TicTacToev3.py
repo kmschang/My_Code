@@ -1,5 +1,7 @@
 from random import randint
 
+## IF you want to make it winnable, change first_move() on line 353 to 'random' instead of 'notrandom'
+
 def coltonum(x,y):
     return (x*3) + y
 
@@ -348,7 +350,7 @@ while play_again == True:
     print_title()
     display_board()
     #play 2
-    first_move('random')
+    first_move('notrandom')
     poor_man_clear()
     print_title()
     display_board()
