@@ -315,7 +315,7 @@ def loading2():
     import time
     print("Calculation pending...")
     for i in range(0, 100):
-        time.sleep(0.01)
+        time.sleep(.1)
         width = (i + 1) / 4
         bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
         sys.stdout.write(u"\u001b[1000D" + bar)
