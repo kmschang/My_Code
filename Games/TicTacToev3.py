@@ -51,20 +51,26 @@ def numtocol(num):
     num -= 1
     return([num//3,num % 3])
 
-def first_move():
-    rand1 = randint(0,2)
-    rand2 = randint(0,2)
-    rand3 = randint(0,2)
-    while rand2 == rand3:
+def first_move(string):
+    if string == 'random':
+        rand1 = randint(0,2)
+        rand2 = randint(0,2)
         rand3 = randint(0,2)
+        while rand2 == rand3:
+            rand3 = randint(0,2)
 
-    if board[rand1][rand2] != ' ':
-        if board[rand2][rand1] != ' ':
-            board[rand2][rand3] = computer
+        if board[rand1][rand2] != ' ':
+            if board[rand2][rand1] != ' ':
+                board[rand2][rand3] = computer
+            else:
+                board[rand2][rand1] = computer
         else:
-            board[rand2][rand1] = computer
+            board[rand1][rand2] = computer
     else:
-        board[rand1][rand2] = computer
+        if board[1][1] != ' ':
+            board[2][2] = computer
+        else:
+            board[1][1] = computer
 
 def computer_turn():
     playercount = 0
@@ -342,7 +348,7 @@ while play_again == True:
     print_title()
     display_board()
     #play 2
-    first_move()
+    first_move('random')
     poor_man_clear()
     print_title()
     display_board()
