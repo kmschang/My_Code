@@ -182,3 +182,16 @@ def loading2():
         sys.stdout.write(u"\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
+
+
+def one_ten():
+    # Makes sure that you only out in integers.
+    while True:
+        try:
+            question = int(input("Pick a number 1-10.\n:"))
+        except:
+            print("Please only put integers. Thank you")
+        else:
+            break
+        finally:
+            print("I don't know what to put here.")
