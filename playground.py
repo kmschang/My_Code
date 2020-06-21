@@ -1,4 +1,13 @@
-if __name__ == '__main__':
-    print("This was run directly")
-else:
-    print("This was not run directly.")
+'''
+This is a playgroung file
+'''
+
+def adding():
+    '''
+    This is an adding function
+    '''
+    first = 10
+    second = 20
+    print(first + second)
+
+adding()
