@@ -191,7 +191,8 @@ def one_ten():
             question = int(input("Pick a number 1-10.\n:"))
         except:
             print("Please only put integers. Thank you")
+            question = ("Try again.")
         else:
             break
         finally:
-            print("I don't know what to put here.")
+            print(question)
