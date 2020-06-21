@@ -193,6 +193,9 @@ def one_ten():
             print("Please only put integers. Thank you")
             question = ("Try again.")
         else:
-            break
+            if question > 0 and question < 11:
+                break
         finally:
             print(question)
+
+one_ten()
