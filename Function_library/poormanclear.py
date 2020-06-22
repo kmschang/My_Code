@@ -10,5 +10,7 @@ while True:
     else:
         if num > 0 and num < 101:
             break
+        else:
+            print('Please only use numbers 1-100. Thank you')
 
 poor_man_clear(num)
