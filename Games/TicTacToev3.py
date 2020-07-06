@@ -1,6 +1,6 @@
 from random import randint
 
-## IF you want to make it winnable, change first_move() on line 353 to 'random' instead of 'notrandom'
+## If you want to make it winnable, change first_move() on line 353 to 'random' instead of 'notrandom'
 
 def coltonum(x,y):
     return (x*3) + y
@@ -317,11 +317,25 @@ def tie():
     print(' | ''  '' | ''  ''|__')
     print('\n')
 
+def loading():
+    import sys
+    import time
+    print("Loading Game. Please Wiat!")
+    for i in range(0, 100):
+        time.sleep(.03)
+        width = (i + 1) / 4
+        bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
+        sys.stdout.write(u"\u001b[1000D" + bar)
+        sys.stdout.flush()
+    print("\n")
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 play_again = True
 
 while play_again == True:
+    poor_man_clear()
+    loading()
     play_again = False
     clear_board()
     poor_man_clear()
@@ -350,7 +364,7 @@ while play_again == True:
     print_title()
     display_board()
     #play 2
-    first_move('notrandom')
+    first_move('random')
     poor_man_clear()
     print_title()
     display_board()
