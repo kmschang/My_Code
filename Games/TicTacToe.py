@@ -278,7 +278,7 @@ def check_turn():
         return False
 
 def poor_man_clear():
-    print('\n'*100)
+    print("\033[H\033[J")
 
 def print_title():
     print('___''  ''   ''  ''___''   ''___''  '' _ ''  ''___''   ''___''  '' _ ''  '' __ ')
