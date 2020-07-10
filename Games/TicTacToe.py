@@ -281,9 +281,9 @@ def poor_man_clear():
     print("\033[H\033[J")
 
 def print_title():
-    print('___''  ''   ''  ''___''   ''___''  '' _ ''  ''___''   ''___''  '' _ ''  '' __ ')
-    print(' | ''  '' | ''  ''|  ''   '' | ''  ''|-|''  ''|  ''   '' | ''  ''| |''  ''|__ ')
-    print(' | ''  '' | ''  ''|__''   '' | ''  ''| |''  ''|__''   '' | ''  ''|_|''  ''|__ ')
+    print('___       ___   ___   _   ___   ___   _    __ ')
+    print(' |    |   |      |   |-|  |      |   | |  |__ ')
+    print(' |    |   |__    |   | |  |__    |   |_|  |__ ')
     print("\n"*2)
 
 def clear_board():
@@ -292,29 +292,29 @@ def clear_board():
             board[x][y] = ' '
 
 def thank_you():
-    print(r'___'r'  'r'   'r'  'r' _ 'r'  'r'    'r'  'r'   'r'   'r'   'r'  'r' _ 'r'  'r'   ')
-    print(r' | 'r'  'r'|_|'r'  'r'|_|'r'  'r'|\ |'r'  'r'|/ 'r'   'r'\_/'r'  'r'| |'r'  'r'| |')
-    print(r' | 'r'  'r'| |'r'  'r'| |'r'  'r'| \|'r'  'r'|\ 'r'   'r' | 'r'  'r'|_|'r'  'r'|_|')
+    print(r'___        _                     _      ')
+    print(r' |   |_|  |_|  |\ |  |/    \_/  | |  | |')
+    print(r' |   | |  | |  | \|  |\     |   |_|  |_|')
     print('\n')
 
 def o_won():
     display_board()
-    print(r' _ '' ''   '' 'r'        ''  'r' _ ''  'r'    ')
-    print(r'| |'' ''___'' 'r'\  /\  /''  'r'| |''  'r'|\ |')
-    print(r'|_|'' ''   '' 'r' \/  \/ ''  'r'|_|''  'r'| \|')
+    print(r' _                 _       ')
+    print(r'| | ___ \  /\  /  | |  |\ |')
+    print(r'|_|      \/  \/   |_|  | \|')
     print('\n')
 
 def x_won():
     display_board()
-    print(r'    '' ''   '' 'r'        ''  'r' _ ''  'r'    ')
-    print(r'\ / '' ''___'' 'r'\  /\  /''  'r'| |''  'r'|\ |')
-    print(r'/ \ '' ''   '' 'r' \/  \/ ''  'r'|_|''  'r'| \|')
+    print(r'                    _       ')
+    print(r'\ /  ___ \  /\  /  | |  |\ |')
+    print(r'/ \       \/  \/   |_|  | \|')
     print('\n')
 
 def tie():
-    print('___''  ''   ''  ''___')
-    print(' | ''  '' | ''  ''|__')
-    print(' | ''  '' | ''  ''|__')
+    print('___       ___')
+    print(' |    |   |__')
+    print(' |    |   |__')
     print('\n')
 
 def loading():
