@@ -333,9 +333,13 @@ board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 play_again = True
 
+poor_man_clear()
+print_title()
+print('\n'*2)
+loading()
+
 while play_again == True:
     poor_man_clear()
-    loading()
     play_again = False
     clear_board()
     poor_man_clear()
