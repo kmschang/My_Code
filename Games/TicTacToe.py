@@ -329,14 +329,17 @@ def loading():
         sys.stdout.flush()
     print("\n")
 
+def loading_screen():
+    poor_man_clear()
+    print_title()
+    print('\n'*2)
+    loading()
+
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 play_again = True
 
-poor_man_clear()
-print_title()
-print('\n'*2)
-loading()
+loading_screen()
 
 while play_again == True:
     poor_man_clear()
