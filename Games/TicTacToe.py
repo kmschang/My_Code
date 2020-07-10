@@ -1,7 +1,5 @@
 from random import randint
 
-print ("This is a test")
-
 ## If you want to make it winnable, change first_move() on line 367 to 'random' instead of 'notrandom'
 
 def coltonum(x,y):
