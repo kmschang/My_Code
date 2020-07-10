@@ -281,9 +281,9 @@ def poor_man_clear():
     print("\033[H\033[J")
 
 def print_title():
-    print('___       ___   ___   _   ___   ___   _    __ ')
-    print(' |    |   |      |   |-|  |      |   | |  |__ ')
-    print(' |    |   |__    |   | |  |__    |   |_|  |__ ')
+    print(r'___       ___   ___   _   ___   ___   _    __ ')
+    print(r' |    |   |      |   |-|  |      |   | |  |__ ')
+    print(r' |    |   |__    |   | |  |__    |   |_|  |__ ')
     print("\n"*2)
 
 def clear_board():
@@ -312,9 +312,9 @@ def x_won():
     print('\n')
 
 def tie():
-    print('___       ___')
-    print(' |    |   |__')
-    print(' |    |   |__')
+    print(r'___       ___')
+    print(r' |    |   |__')
+    print(r' |    |   |__')
     print('\n')
 
 def loading():
