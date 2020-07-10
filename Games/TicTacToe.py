@@ -398,6 +398,7 @@ while play_again == True:
                 break
             if again.lower() == 'n':
                 play_again = False
+                poor_man_clear()
                 break
     else:
         if check_for_win('O') == True:
@@ -411,6 +412,7 @@ while play_again == True:
                     break
                 if again.lower() == 'n':
                     play_again = False
+                    poor_man_clear()
                     break
         else:
             #play 6
@@ -433,6 +435,7 @@ while play_again == True:
                         break
                     if again.lower() == 'n':
                         play_again = False
+                        poor_man_clear()
                         break
             else:
                 if check_for_win('O') == True:
@@ -446,6 +449,7 @@ while play_again == True:
                             break
                         if again.lower() == 'n':
                             play_again = False
+                            poor_man_clear()
                             break
                 else:
                     #play 7
@@ -464,6 +468,7 @@ while play_again == True:
                                 break
                             if again.lower() == 'n':
                                 play_again = False
+                                poor_man_clear()
                                 break
                     else:
                         if check_for_win('O') == True:
@@ -478,6 +483,7 @@ while play_again == True:
                                     break
                                 if again.lower() == 'n':
                                     play_again = False
+                                    poor_man_clear()
                                     break
                         else:
                             #play 8
@@ -501,6 +507,7 @@ while play_again == True:
                                         break
                                     if again.lower() == 'n':
                                         play_again = False
+                                        poor_man_clear()
                                         break
                             else:
                                 if check_for_win('O') == True:
@@ -515,6 +522,7 @@ while play_again == True:
                                             break
                                         if again.lower() == 'n':
                                             play_again = False
+                                            poor_man_clear()
                                             break
                                 else:
                                     #play 9
@@ -544,4 +552,5 @@ while play_again == True:
                                                 break
                                             if again.lower() == 'n':
                                                 play_again = False
+                                                poor_man_clear()
                                                 break
