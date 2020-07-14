@@ -190,12 +190,12 @@ def one_ten():
         try:
             question = int(input("Pick a number 1-10.\n:"))
         except:
-            print("Please only put integers. Thank you")
+            print("Please only input integers. Thank you.")
             question = ("Try again.")
         else:
             if question > 0 and question < 11:
                 break
-        finally:
-            print(question)
+            else:
+                print ('Please only input integers 1-10. Thank you.')
 
 one_ten()
