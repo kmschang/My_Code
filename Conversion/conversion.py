@@ -12,7 +12,6 @@ def inches_km(text):
     return float(text) / 39370.8
 def inches_mm(text):
     return float(text) * 25.4
-
 def cm_feet(text):
     return float(text) / 30.48
 def cm_inches(text):
@@ -27,7 +26,6 @@ def cm_km(text):
     return float(text) / 100000
 def cm_mm(text):
     return float(text) * 10
-
 def yards_feet(text):
     return float(text) * 3
 def yards_inches(text):
@@ -42,7 +40,6 @@ def yards_km(text):
     return float(text) / 1093.61
 def yards_mm(text):
     return float(text) * 914.4
-
 def meters_feet(text):
     return float(text) * 3.28
 def meters_inches(text):
@@ -57,7 +54,6 @@ def meters_km(text):
     return float(text) / 1000
 def meters_mm(text):
     return float(text) * 1000
-
 def miles_feet(text):
     return float(text) * 5280
 def miles_inches(text):
@@ -72,7 +68,6 @@ def miles_km(text):
     return float(text) * 1.61
 def miles_mm(text):
     return float(text) * 1609344
-
 def km_feet(text):
     return float(text) * 3280.84
 def km_inches(text):
@@ -87,7 +82,6 @@ def km_miles(text):
     return float(text) * 0.62
 def km_mm(text):
     return float(text) * 1000000
-
 def feet_inches(text):
     return float(text) * 12
 def feet_cm(text):
@@ -102,7 +96,6 @@ def feet_km(text):
     return float(text) * 0.0003
 def feet_mm(text):
     return float(text) * 304.8
-
 def mm_inches(text):
     return float(text) * 0.039
 def mm_cm(text):
@@ -126,7 +119,6 @@ first = new_question[0].lower()
 second = new_question[2].lower()
 second_question = input((f"How many {first} do you want to convert to {second}?\n:"))
 value = second_question
-
 if first == 'inches' and second == 'centimeters':
     incm = str(inches_cm(value))
     new_incm = incm[0:8]
@@ -155,7 +147,6 @@ if first == 'inches' and second == 'millimeters':
     inmm = str(inches_mm(value))
     new_inmm = inmm[0:8]
     print ("There are " + new_inmm + ' millimeters in '+ value + ' inches!')
-
 if first == 'centimeters' and second == 'inches':
     cmin = str(cm_inches(value))
     new_cmin = cmin[0:8]
@@ -184,7 +175,6 @@ if first == 'centimeters' and second == 'millimeters':
     cmmm = str(cm_mm(value))
     new_cmmm = cmmm[0:8]
     print ("There are "+ new_cmmm + ' millimeters in '+ value + ' centimeters!')
-
 if first == 'yards' and second == 'centimeters':
     ydcm = str(yards_cm(value))
     new_ydcm = ydcm[0:8]
@@ -213,7 +203,6 @@ if first == 'yards' and second == 'feet':
     ydft = str(yards_feet(value))
     new_ydft = ydft[0:8]
     print ("There are "+ new_ydft + ' feet in '+ value + ' yards!')
-
 if first == 'meters' and second == 'centimeters':
     mcm = str(meters_cm(value))
     new_mcm = mcm[0:8]
@@ -242,7 +231,6 @@ if first == 'meters' and second == 'kilometers':
     mkm = str(meters_km(value))
     new_mkm = mkm[0:8]
     print ("There are " + new_mkm + ' kilometers in '+ value + ' meters!')
-
 if first == 'feet' and second == 'inches':
     ftin = str(feet_inches(value))
     new_ftin = ftin[0:8]
@@ -271,7 +259,6 @@ if first == 'feet' and second == 'millimeters':
     ftmm = str(feet_mm(value))
     new_ftmm = ftmm[0:8]
     print("There are " + new_ftmm + ' millimeters in ' + value + ' feet!')
-
 if first == 'millimeters' and second == 'inches':
     mmin = str(mm_inches(value))
     new_mmin = mmin[0:8]
@@ -300,7 +287,6 @@ if first == 'millimeters' and second == 'feet':
     mmft = str(mm_feet(value))
     new_mmft = mmft[0:8]
     print("There are " + new_mmft + ' feet in ' + value + ' millimeters!')
-
 if first == 'miles' and second == 'inches':
     miin = str(miles_inches(value))
     new_miin = miin[0:8]
@@ -329,7 +315,6 @@ if first == 'miles' and second == 'millimeters':
     mimm = str(miles_mm(value))
     new_mimm = mimm[0:30]
     print("There are " + new_mimm + ' millimeters in ' + value + ' miles!')
-
 if first == 'kilometers' and second == 'inches':
     kmin = str(km_inches(value))
     new_kmin = kmin[0:15]
