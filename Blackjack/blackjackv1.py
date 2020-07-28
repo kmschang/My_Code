@@ -40,3 +40,4 @@ deck.shuffle()
 
 mycard = deck.deal_one()
 
+print(mycard)
