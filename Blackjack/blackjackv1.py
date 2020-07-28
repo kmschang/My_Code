@@ -38,6 +38,10 @@ class Deck:
 deck = Deck()
 deck.shuffle()
 
-mycard = deck.deal_one()
+firstcard = deck.deal_one()
 
-print(mycard)
+print (firstcard)
+
+secondcard = deck.deal_one()
+
+print (secondcard)
