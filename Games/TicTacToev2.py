@@ -311,15 +311,15 @@ def o_won(string):
     elif string == 'youwon':
         if xoro.lower() == 'o':
             display_board()
-            print(r'      _                      _       ')
-            print(r' \/  | |  |  |    \  /\  /  | |  |\ |')
-            print(r' |   |_|  |__|     \/  \/   |_|  | \|')
+            print(r'      _                       _       ')
+            print(r' \_/  | |  |  |    \  /\  /  | |  |\ |')
+            print(r'  |   |_|  |__|     \/  \/   |_|  | \|')
             print('\n')
         elif xoro.lower() == 'x':
             display_board()
-            print(r'      _                   _    __   ___ ')
-            print(r' \/  | |  |  |     |     | |   |_    |  ')
-            print(r' |   |_|  |__|     |__   |_|   __|   |  ')
+            print(r'       _                   _    __   ___ ')
+            print(r' \_/  | |  |  |     |     | |   |_    |  ')
+            print(r'  |   |_|  |__|     |__   |_|   __|   |  ')
             print('\n')
 
 def x_won(string):
@@ -333,13 +333,13 @@ def x_won(string):
         if xoro.lower() == 'x':
             display_board()
             print(r'      _                      _       ')
-            print(r' \/  | |  |  |    \  /\  /  | |  |\ |')
+            print(r'\_/  | |  |  |    \  /\  /  | |  |\ |')
             print(r' |   |_|  |__|     \/  \/   |_|  | \|')
             print('\n')
         elif xoro.lower() == 'o':
             display_board()
             print(r'      _                   _    __   ___ ')
-            print(r' \/  | |  |  |     |     | |   |_    |  ')
+            print(r'\_/  | |  |  |     |     | |   |_    |  ')
             print(r' |   |_|  |__|     |__   |_|   __|   |  ')
             print('\n')
 
@@ -356,7 +356,7 @@ def loading():
     for i in range(0, 100):
         time.sleep(.03)
         width = (i + 1) / 4
-        bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
+        bar = "[" + "•" * int(width) + " " * (25 - int(width)) + "]"
         sys.stdout.write(u"\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
