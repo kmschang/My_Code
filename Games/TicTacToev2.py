@@ -1,10 +1,10 @@
 from random import randint
 
-## If you want to make it winnable, change first_move() on line 406 to 'random' instead of 'notrandom'
+## If you want to make it winnable, change first_move() to 'random' instead of 'notrandom'
 
-##If you want to change the win/lose message to 'You won", change x_won() on lines 427,464,496,535,570 to 'youwon' if you want it to say 'X-won" change x_won() on lines 427,464,496,535,570 to 'xwon'.
+##If you want to change the win/lose message to 'You won", change x_won()  to 'youwon' if you want it to say 'X-won" change x_won() to 'xwon'.
 
-##If you want to change the win/lose message to 'You won", change o_won() on lines 441,478,511,550,574 to 'youwon' if you want it to say 'O-won" change o_won() on lines 441,478,511,550,574 to 'owon'.
+##If you want to change the win/lose message to 'You won", change o_won()  to 'youwon' if you want it to say 'O-won" change o_won() to 'owon'.
 
 def coltonum(x,y):
     return (x*3) + y
@@ -361,6 +361,18 @@ def loading():
         sys.stdout.flush()
     print("\n")
 
+def ending():
+    import sys
+    import time
+    print("End Game. Please Wiat!")
+    for i in range(0, 100):
+        time.sleep(.03)
+        width = (i + 1) / 4
+        bar = "[" + " " * int(width) + "•" * (25 - int(width)) + "]"
+        sys.stdout.write(u"\u001b[1000D" + bar)
+        sys.stdout.flush()
+    print("\n")
+
 def loading_screen():
     poor_man_clear()
     print_title()
@@ -403,7 +415,7 @@ while play_again == True:
     print_title()
     display_board()
     #play 2
-    first_move('random')
+    first_move('notrandom')
     poor_man_clear()
     print_title()
     display_board()
@@ -434,6 +446,11 @@ while play_again == True:
             if again.lower() == 'n':
                 play_again = False
                 poor_man_clear()
+                print_title()
+                thank_you()
+                display_board()
+                ending()
+                poor_man_clear()
                 break
     else:
         if check_for_win('O') == True:
@@ -447,6 +464,11 @@ while play_again == True:
                     break
                 if again.lower() == 'n':
                     play_again = False
+                    poor_man_clear()
+                    print_title()
+                    thank_you()
+                    display_board()
+                    ending()
                     poor_man_clear()
                     break
         else:
@@ -471,6 +493,11 @@ while play_again == True:
                     if again.lower() == 'n':
                         play_again = False
                         poor_man_clear()
+                        print_title()
+                        thank_you()
+                        display_board()
+                        ending()
+                        poor_man_clear()
                         break
             else:
                 if check_for_win('O') == True:
@@ -484,6 +511,11 @@ while play_again == True:
                             break
                         if again.lower() == 'n':
                             play_again = False
+                            poor_man_clear()
+                            print_title()
+                            thank_you()
+                            display_board()
+                            ending()
                             poor_man_clear()
                             break
                 else:
@@ -504,6 +536,11 @@ while play_again == True:
                             if again.lower() == 'n':
                                 play_again = False
                                 poor_man_clear()
+                                print_title()
+                                thank_you()
+                                display_board()
+                                ending()
+                                poor_man_clear()
                                 break
                     else:
                         if check_for_win('O') == True:
@@ -518,6 +555,11 @@ while play_again == True:
                                     break
                                 if again.lower() == 'n':
                                     play_again = False
+                                    poor_man_clear()
+                                    print_title()
+                                    thank_you()
+                                    display_board()
+                                    ending()
                                     poor_man_clear()
                                     break
                         else:
@@ -543,6 +585,11 @@ while play_again == True:
                                     if again.lower() == 'n':
                                         play_again = False
                                         poor_man_clear()
+                                        print_title()
+                                        thank_you()
+                                        display_board()
+                                        ending()
+                                        poor_man_clear()
                                         break
                             else:
                                 if check_for_win('O') == True:
@@ -557,6 +604,11 @@ while play_again == True:
                                             break
                                         if again.lower() == 'n':
                                             play_again = False
+                                            poor_man_clear()
+                                            print_title()
+                                            thank_you()
+                                            display_board()
+                                            ending()
                                             poor_man_clear()
                                             break
                                 else:
@@ -587,5 +639,10 @@ while play_again == True:
                                                 break
                                             if again.lower() == 'n':
                                                 play_again = False
+                                                poor_man_clear()
+                                                print_title()
+                                                thank_you()
+                                                display_board()
+                                                ending()
                                                 poor_man_clear()
                                                 break
