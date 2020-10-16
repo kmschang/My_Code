@@ -375,7 +375,8 @@ def loading():
     for i in range(0, 100):
         time.sleep(.03)
         width = (i + 1) / 4
-        bar = "[" + "•" * int(width) + " " * (25 - int(width)) + "]"
+        bar = "[" + "\u001b[32;1m•" * \
+            int(width) + " " * (25 - int(width)) + "\u001b[37;1m]"
         sys.stdout.write(u"\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
@@ -387,7 +388,8 @@ def ending():
     for i in range(0, 100):
         time.sleep(.03)
         width = (i + 1) / 4
-        bar = "[" + " " * int(width) + "•" * (25 - int(width)) + "]"
+        bar = "[" + " " * int(width) + "\u001b[32;1m•" * \
+            (25 - int(width)) + "\u001b[37;1m]"
         sys.stdout.write(u"\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
