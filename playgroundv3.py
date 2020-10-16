@@ -1,15 +1,14 @@
-board = [['X', 'X', 'X'], [' ', ' ', ' '], ['O', 'O', 'O']]
+board = [['X', 'X', 'X'],[' ', ' ', ' '], ['O', 'O', 'O']]
 
 
 def display_board():
     for x in range(3):
+        count = 0
         for y in range(3):
             if board[x][y] == 'X':
-                board[x][y] = '\u001b[31;1mX'
-            if board[x][y] == 'O':
-                board[x][y] = '\u001b[34;1mO'
-            else:
-                board[x][y] == '\u001b[37;1m '
+                count += 1
+            if count == 3:
+                board[x][y] = '\u001b[32; 1mX'
     for col in range(3):
         for row in range(3):
             print(board[col][row], end='')
@@ -19,5 +18,6 @@ def display_board():
                 print('\u001b[31;0m\n---------\n', end='')
             if col == 2 and row == 2:
                 print('\n')
+
 
 display_board()

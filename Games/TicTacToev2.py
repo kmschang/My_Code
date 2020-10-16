@@ -20,6 +20,25 @@ def display_board():
             if col == 2 and row == 2:
                 print('\n')
 
+def display_winning_board():
+    for x in range(3):
+        for y in range(3):
+            if board[x][y] == 'X':
+                board[x][y] = '\u001b[31;1mX'
+            if board[x][y] == 'O':
+                board[x][y] = '\u001b[34;1mO'
+            else:
+                board[x][y] == '\u001b[37;1m '
+    for col in range(3):
+        for row in range(3):
+            print(board[col][row], end='')
+            if row != 2:
+                print('\u001b[31;0m | ', end='')
+            if row == 2 and col != 2:
+                print('\u001b[31;0m\n---------\n', end='')
+            if col == 2 and row == 2:
+                print('\u001b[31;0m\n')
+
 def check_for_win(letter):
     letter = letter.upper()
     count2 = 0
@@ -438,6 +457,7 @@ while play_again == True:
         poor_man_clear()
         x_won('youwon')
         thank_you()
+        display_winning_board()
         while True:
             again = input("Do you want to play again? (y or n)?\n:")
             if again.lower() == 'y':
@@ -448,7 +468,7 @@ while play_again == True:
                 poor_man_clear()
                 print_title()
                 thank_you()
-                display_board()
+                display_winning_board()
                 ending()
                 poor_man_clear()
                 break
@@ -457,6 +477,7 @@ while play_again == True:
             poor_man_clear()
             o_won('youwon')
             thank_you()
+            display_winning_board()
             while True:
                 again = input("Do you want to play again? (y or n)?\n:")
                 if again.lower() == 'y':
@@ -467,7 +488,7 @@ while play_again == True:
                     poor_man_clear()
                     print_title()
                     thank_you()
-                    display_board()
+                    display_winning_board()
                     ending()
                     poor_man_clear()
                     break
@@ -485,6 +506,7 @@ while play_again == True:
                 poor_man_clear()
                 x_won('youwon')
                 thank_you()
+                display_winning_board()
                 while True:
                     again = input("Do you want to play again? (y or n)?\n:")
                     if again.lower() == 'y':
@@ -495,7 +517,7 @@ while play_again == True:
                         poor_man_clear()
                         print_title()
                         thank_you()
-                        display_board()
+                        display_winning_board()
                         ending()
                         poor_man_clear()
                         break
@@ -504,6 +526,7 @@ while play_again == True:
                     poor_man_clear()
                     o_won('youwon')
                     thank_you()
+                    display_winning_board()
                     while True:
                         again = input("Do you want to play again? (y or n)?\n:")
                         if again.lower() == 'y':
@@ -514,7 +537,7 @@ while play_again == True:
                             poor_man_clear()
                             print_title()
                             thank_you()
-                            display_board()
+                            display_winning_board()
                             ending()
                             poor_man_clear()
                             break
@@ -527,6 +550,7 @@ while play_again == True:
                         poor_man_clear()
                         x_won('youwon')
                         thank_you()
+                        display_winning_board()
                         while True:
                             again = input(
                                 "Do you want to play again? (y or n)?\n:")
@@ -538,7 +562,7 @@ while play_again == True:
                                 poor_man_clear()
                                 print_title()
                                 thank_you()
-                                display_board()
+                                display_winning_board()
                                 ending()
                                 poor_man_clear()
                                 break
@@ -547,6 +571,7 @@ while play_again == True:
                             poor_man_clear()
                             o_won('youwon')
                             thank_you()
+                            display_winning_board()
                             while True:
                                 again = input(
                                     "Do you want to play again? (y or n)?\n:")
@@ -558,7 +583,7 @@ while play_again == True:
                                     poor_man_clear()
                                     print_title()
                                     thank_you()
-                                    display_board()
+                                    display_winning_board()
                                     ending()
                                     poor_man_clear()
                                     break
@@ -576,6 +601,7 @@ while play_again == True:
                                 poor_man_clear()
                                 x_won('youwon')
                                 thank_you()
+                                display_winning_board()
                                 while True:
                                     again = input(
                                         "Do you want to play again? (y or n)?\n:")
@@ -587,7 +613,7 @@ while play_again == True:
                                         poor_man_clear()
                                         print_title()
                                         thank_you()
-                                        display_board()
+                                        display_winning_board()
                                         ending()
                                         poor_man_clear()
                                         break
@@ -596,6 +622,7 @@ while play_again == True:
                                     poor_man_clear()
                                     o_won('youwon')
                                     thank_you()
+                                    display_winning_board()
                                     while True:
                                         again = input(
                                             "Do you want to play again? (y or n)?\n:")
@@ -607,7 +634,7 @@ while play_again == True:
                                             poor_man_clear()
                                             print_title()
                                             thank_you()
-                                            display_board()
+                                            display_winning_board()
                                             ending()
                                             poor_man_clear()
                                             break
@@ -621,13 +648,15 @@ while play_again == True:
                                         poor_man_clear()
                                         x_won('youwon')
                                         thank_you()
+                                        display_winning_board()
                                     if check_for_win('O') == True:
                                         poor_man_clear()
                                         o_won('youwon')
                                         thank_you()
+                                        display_winning_board
                                     else:
                                         poor_man_clear()
-                                        display_board()
+                                        display_winning_board()
                                         print('\n')
                                         tie()
                                         thank_you()
@@ -642,7 +671,7 @@ while play_again == True:
                                                 poor_man_clear()
                                                 print_title()
                                                 thank_you()
-                                                display_board()
+                                                display_winning_board()
                                                 ending()
                                                 poor_man_clear()
                                                 break
