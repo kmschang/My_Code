@@ -1,13 +1,13 @@
-board = [['X', 'X', 'X'], [' ', ' ', ' '], ['O', 'O', 'O']]
+board = [['X', 'O', 'X'], ['O', 'X', 'O'], ['X', 'O', 'X']]
 
 
 def display_board():
     for x in range(3):
         for y in range(3):
             if board[x][y] == 'X':
-                board[x][y] = '\u001b[31;1mX'
+                board[x][y] = '\u001b[31;1mX\u001b[37;1m'
             if board[x][y] == 'O':
-                board[x][y] = '\u001b[34;1mO'
+                board[x][y] = '\u001b[34;1mO\u001b[37;1m'
             else:
                 board[x][y] == '\u001b[37;1m '
     for col in range(3):
