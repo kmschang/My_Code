@@ -1,5 +1,7 @@
 n = 0
 
+Kyle = 17
+
 from random import randint
 
 numbers = []
