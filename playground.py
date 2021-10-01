@@ -1,33 +1,31 @@
 '''
 This is a playgroung file
 '''
+n = 0
 
-class People():
+from random import randint
 
-    def __init__ (self,first_name,last_name,age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = int(age)
+numbers = []
+means = []
+meanlist = []
+x=0
 
-    def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+while x < 100:
+    while n < 10:
+        numbers.append(randint(0,100))
+        n+=1
 
-    def __len__(self):
-        return self.age
+    while len(numbers) > 1:
+        newnumber = numbers[0] + numbers[1]
+        numbers.append(newnumber)
+        numbers.pop(0)
+        numbers.pop(0)
 
-    def __del__(self):
-        print (f'{self.first_name} has been killed.')
+    means.append (numbers[0]/n)
+    n=0
 
-    def name(self):
-        print(f'My name is {self.first_name} {self.last_name}.')
-
-    def time_alive(self):
-        print(f'I am {self.age} years old.')
-
-kyle = People('Kyle','Schang','16')
-
-print(len(kyle))
-
-kyle.name()
-kyle.time_alive()
-
+    numbers = []
+    newnumber = 0
+    x+=1
+    
+print(means)

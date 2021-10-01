@@ -1,23 +1,26 @@
-board = [['X', 'O', 'X'], ['O', 'X', 'O'], ['X', 'O', 'X']]
+n = 0
+
+from random import randint
+
+numbers = []
+addition = []
+meanlist = []
+x=0
+
+while x < 100:
+    while n < 10:
+        numbers.append(randint(0,100))
+        n+=1
+
+    addition = sum(numbers)
+    mean = addition/n
+    meanlist.append(mean)
+
+    n=0
+
+    numbers = []
+    newnumber = 0
+    x+=1
 
 
-def display_board():
-    for x in range(3):
-        for y in range(3):
-            if board[x][y] == 'X':
-                board[x][y] = '\u001b[31;1mX\u001b[37;1m'
-            if board[x][y] == 'O':
-                board[x][y] = '\u001b[34;1mO\u001b[37;1m'
-            else:
-                board[x][y] == '\u001b[37;1m '
-    for col in range(3):
-        for row in range(3):
-            print(board[col][row], end='')
-            if row != 2:
-                print('\u001b[31;0m | ', end='')
-            if row == 2 and col != 2:
-                print('\u001b[31;0m\n---------\n', end='')
-            if col == 2 and row == 2:
-                print('\n')
-
-display_board()
+print(meanlist)
