@@ -14,10 +14,12 @@ for _ in range(100):
         n += 1
 
     addition = sum(numbers)
-    mean = addition/n
+    mean = addition / n
     meanlist.append(mean)
 
     n = 0
 
     numbers = []
 print(meanlist)
+
+# This is a change from pycharm
