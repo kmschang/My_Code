@@ -26,3 +26,5 @@ SD = sum(distancemean)
 SDreal = SD / y
 
 print("σ = " + str(SDreal))
+
+# TODO make SDreal rounded to the nearst hundreth or thousanth but not scientific notation

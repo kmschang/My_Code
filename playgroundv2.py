@@ -22,4 +22,3 @@ for _ in range(100):
     numbers = []
 print(meanlist)
 
-# This is a change from pycharm
