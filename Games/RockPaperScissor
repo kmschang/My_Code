@@ -1,0 +1,64 @@
+from random import randint
+
+board = ["rock", "paper", "scissor"]
+
+again = True
+
+n = 0
+
+player_score = 0
+computer_score = 0
+tie_score = 0
+
+
+while again:
+
+    outcome = 0
+    print("\033[H\033[J")
+    print("Rock, Paper, Scissor")
+    if n != 0:
+        print("\033[H\033[J")
+        print("Player Score: " + str(player_score) + ", Computer Score: " + str(computer_score) + " , Ties: " + str(tie_score))
+
+    player = int(input("Rock(0), Paper(1), Scissors(2), quit(3).\n:"))
+    computer = randint(0, 2)
+
+    if player == 3:
+        break
+    if player == computer:
+        tie_score += 1
+        outcome = 1
+    if player == 0 and computer == 1:
+        computer_score += 1
+        outcome = 2
+    if player == 0 and computer == 2:
+        player_score += 1
+        outcome = 3
+    if player == 1 and computer == 0:
+        player_score += 1
+        outcome = 3
+    if player == 1 and computer == 2:
+        computer_score += 1
+        outcome = 2
+    if player == 2 and computer == 0:
+        computer_score += 1
+        outcome = 2
+    if player == 2 and computer == 1:
+        player_score += 1
+        outcome = 3
+
+    if outcome == 1:
+        print("\033[H\033[J")
+        print("The game was a tie. Both chose " + board[player].title())
+        print("Player Score: " + str(player_score) + ", Computer Score: " + str(computer_score) + " , Ties: " + str(
+            tie_score))
+    elif outcome == 2:
+        print("\033[H\033[J")
+        print("The computer won. " + board[computer].title() + " beats " + board[player].title() + ".")
+        print("Player Score: " + str(player_score) + ", Computer Score: " + str(computer_score) + " , Ties: " + str(
+            tie_score))
+    elif outcome == 3:
+        print("\033[H\033[J")
+        print("You won. " + board[player].title() + " beats " + board[computer].title() + ".")
+        print("Player Score: " + str(player_score) + ", Computer Score: " + str(computer_score) + " , Ties: " + str(
+            tie_score))
