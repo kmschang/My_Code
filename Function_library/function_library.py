@@ -28,8 +28,6 @@ def again():
                 return False
             else:
                 break
-        else:
-            print("Please only type 'y' for yes and 'n' for no.")
 
 
 def lesser_of_two_evens(a, b):
@@ -198,4 +196,36 @@ def one_ten():
             else:
                 print ('Please only input integers 1-10. Thank you.')
 
-one_ten()
+
+
+def again():
+    '''
+    This askes you if you want to play again and askes you to confirm if you say no.
+    '''
+    while True:
+        if str(input("Do you want to play again? (y or n)\n:")) == 'y':
+            return True
+        while True:
+            if str(input("Are you sure want quit? (y or n)\n:")) == 'y':
+                return False
+            else:
+                break
+
+
+def againv2():
+
+    while True:
+        try:
+            yorn = int(input("Do you want to play again? (1 = yes or 0 = no)\n:"))
+        except:
+            print("Please only input 1 for yes or 0 for no. Thank you.")
+        else:
+            if yorn == 1:
+                return True
+            elif yorn == 0:
+                return False
+            else:
+                print("Please only input 0 or 1.")
+
+
+againv2()
