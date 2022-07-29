@@ -16,7 +16,6 @@ def guess():
             question = int(input("\nPick a number 1-100\n:"))
         except:
             print("Please only input integers. Thank you.")
-            question = "Try again."
         else:
             if 0 < question < 101:
                 return question
@@ -28,8 +27,8 @@ def random_number():
     comp_num = int(randint(0, 100))
     return comp_num
 
-def again():
 
+def again():
     while True:
         try:
             yorn = int(input("\nDo you want to play again? (1 = yes or 0 = no)\n:"))
@@ -44,8 +43,8 @@ def again():
                 print("Please only input 0 or 1.")
 
 
-def ending_message(computer,player,name):
-    diff = player - computer
+def ending_message(computer, player, name):
+    diff = computer - player
     print(f"\nComputer: {computer}, {name}: {player}")
     print(f"The difference was {diff}!")
 
@@ -60,11 +59,10 @@ def game():
         player_guess = guess()
         computer_guess = random_number()
 
-        ending_message(computer_guess,player_guess,name)
+        ending_message(computer_guess, player_guess, name)
 
         if not again():
             break
 
 
 game()
-
