@@ -1,5 +1,6 @@
 from random import randint
 
+
 def again():
     while True:
         try:
@@ -20,13 +21,13 @@ name = name.capitalize()
 
 while True:
 
-    player_output = int(input("Choose a number 1-10\n:"))
+    player_output = int(input("Choose a number 1-100\n:"))
 
     count = 0
 
     while True:
 
-        computer_output = randint(1, 10)
+        computer_output = randint(1, 100)
 
         print(f"Computer: {computer_output}, Player: {player_output}")
         print(f"Difference:\u001b[31;1m {player_output - computer_output}\n\u001b[31;0m")
