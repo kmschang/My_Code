@@ -1,5 +1,7 @@
 from random import randint
 
+"This is a test"
+
 
 def again():
     while True:
