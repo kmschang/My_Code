@@ -2,6 +2,7 @@ from random import randint
 
 "This is a test"
 
+"This is another test"
 
 def again():
     while True:
