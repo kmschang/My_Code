@@ -1,4 +1,6 @@
-from random import  randint
+from random import randint
+
+"This is a test"
 
 def integer_input():
     while True:
