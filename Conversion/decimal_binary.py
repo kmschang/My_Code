@@ -1,5 +1,7 @@
 from random import randint
 
+"this better work now"
+
 def integer_input():
     while True:
         try:
