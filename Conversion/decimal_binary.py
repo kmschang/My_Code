@@ -1,7 +1,3 @@
-from random import randint
-
-"Adding things across IDE's"
-
 def integer_input():
     while True:
         try:
@@ -9,12 +5,11 @@ def integer_input():
         except:
             print("Please only input integers. Thank you.")
         else:
-            if question > 0 and question < 99999999999:
+            if 0 < question < 99999999999:
                 return question
 
 
 def conversion(num):
-
     n = 0
 
     values = []
@@ -22,12 +17,13 @@ def conversion(num):
         values.append(str(num % 2))
         num = num // 2
 
-
     while len(values) != 1:
         values_length = len(values)
-        values.append(values[-1-n]+values[-2-n])
+        values.append(values[-1 - n] + values[-2 - n])
         values.pop(-2)
         values.pop(-2)
+        if values_length == values_length:
+            pass
 
         n += 0
 
