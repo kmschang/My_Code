@@ -10,7 +10,7 @@ def binary_input():
                 cont = False
                 break
 
-        if cont == True:
+        if cont:
             return question
 
 
@@ -25,12 +25,16 @@ def conversion(num):
         addition = binary_number_int*expoential_number
         values.append(addition)
         n += 1
+        if digit == digit:
+            pass
 
     while len(values) != 1:
         values_length = len(values)
         values.append(values[0]+values[1])
         values.pop(0)
         values.pop(0)
+        if values_length == values_length:
+            pass
 
         if len(values) == 1:
             break
