@@ -5,12 +5,15 @@ def integer_input():
         except:
             print("Please only input integers. Thank you.")
         else:
-            if 0 < question < 99999999999:
+            if isinstance(question, int):
                 return question
 
 
 def conversion(num):
     n = 0
+
+    if num == 1:
+        return 1
 
     values = []
     while num != 0:
