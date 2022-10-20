@@ -1,5 +1,9 @@
-def poor_man_clear(num=100):
-    print('\n'*num)
+number1 = int(input("Number 1?\n:"))
+number2 = int(input("Number 2?\n:"))
 
+result = number1 + number2
 
-poor_man_clear()
+print(result)
+
+with open("playground_outputs.txt", "a") as outputs:
+    outputs.write(f"\n{result}")

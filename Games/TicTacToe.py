@@ -1,9 +1,13 @@
 from random import randint
 
+
 ## If you want to make it winnable, change first_move() on line 374 to 'random' instead of 'notrandom'
 
-def coltonum(x,y):
-    return (x*3) + y
+## Loading screen on/off line 342
+
+def coltonum(x, y):
+    return (x * 3) + y
+
 
 def display_board():
     for col in range(3):
@@ -16,6 +20,7 @@ def display_board():
             if col == 2 and row == 2:
                 print('\n')
 
+
 def check_for_win(letter):
     letter = letter.upper()
     count2 = 0
@@ -26,7 +31,7 @@ def check_for_win(letter):
             if board[x][y] == letter:
                 count += 1
         if count == 3:
-            print (f"{letter} won!")
+            print(f"{letter} won!")
             return True
     for x in range(3):
         count = 0
@@ -34,7 +39,7 @@ def check_for_win(letter):
             if board[y][x] == letter:
                 count += 1
         if count == 3:
-            print (f"{letter} won!")
+            print(f"{letter} won!")
             return True
     for x in range(3):
         if board[x][x] == letter:
@@ -43,23 +48,25 @@ def check_for_win(letter):
             print(f"{letter} won!")
             return True
     for x in range(3):
-        if board[x][2-x] == letter:
+        if board[x][2 - x] == letter:
             count3 += 1
         if count3 == 3:
             print(f"{letter} won!")
             return True
 
+
 def numtocol(num):
     num -= 1
-    return([num//3,num % 3])
+    return ([num // 3, num % 3])
+
 
 def first_move(string):
     if string == 'random':
-        rand1 = randint(0,2)
-        rand2 = randint(0,2)
-        rand3 = randint(0,2)
+        rand1 = randint(0, 2)
+        rand2 = randint(0, 2)
+        rand3 = randint(0, 2)
         while rand2 == rand3:
-            rand3 = randint(0,2)
+            rand3 = randint(0, 2)
 
         if board[rand1][rand2] != ' ':
             if board[rand2][rand1] != ' ':
@@ -73,6 +80,7 @@ def first_move(string):
             board[2][2] = computer
         else:
             board[1][1] = computer
+
 
 def computer_turn():
     playercount = 0
@@ -98,6 +106,7 @@ def computer_turn():
     else:
         pass
 
+
 def computer_going_to_win():
     placed = False
     for x in range(3):
@@ -108,12 +117,12 @@ def computer_going_to_win():
         if count == 2 and board[x][y] == ' ':
             placed = True
             board[x][y] = computer
-        if count == 2 and board[x][y-1] == ' ':
+        if count == 2 and board[x][y - 1] == ' ':
             placed = True
-            board[x][y-1] = computer
-        if count == 2 and board[x][y-2] == ' ':
+            board[x][y - 1] = computer
+        if count == 2 and board[x][y - 2] == ' ':
             placed = True
-            board[x][y-2] = computer
+            board[x][y - 2] = computer
         if placed == True:
             break
     if placed == True:
@@ -128,12 +137,12 @@ def computer_going_to_win():
             if count == 2 and board[y][x] == ' ':
                 placed = True
                 board[y][x] = computer
-            if count == 2 and board[y-1][x] == ' ':
+            if count == 2 and board[y - 1][x] == ' ':
                 placed = True
-                board[y-1][x] = computer
-            if count == 2 and board[y-2][x] == ' ':
+                board[y - 1][x] = computer
+            if count == 2 and board[y - 2][x] == ' ':
                 placed = True
-                board[y-2][x] = computer
+                board[y - 2][x] = computer
             if placed == True:
                 return True
     if placed == True:
@@ -146,32 +155,33 @@ def computer_going_to_win():
         if count == 2 and board[x][x] == ' ':
             placed = True
             board[x][x] = computer
-        if count == 2 and board [x-1][x-1] == ' ':
+        if count == 2 and board[x - 1][x - 1] == ' ':
             placed = True
-            board[x-1][x-1] = computer
-        if count == 2 and board[x-2][x-2] == ' ':
+            board[x - 1][x - 1] = computer
+        if count == 2 and board[x - 2][x - 2] == ' ':
             placed = True
-            board[x-2][x-2] = computer
+            board[x - 2][x - 2] = computer
     if placed == True:
         return True
     if placed == False:
         count = 0
         for x in range(3):
-            if board[x][2-x] == computer:
+            if board[x][2 - x] == computer:
                 count += 1
-        if count == 2 and board[x][2-x] == ' ':
+        if count == 2 and board[x][2 - x] == ' ':
             placed = True
-            board[x][2-x] = computer
-        if count == 2 and board[abs(x-1)][2-(abs(x-1))] == ' ':
+            board[x][2 - x] = computer
+        if count == 2 and board[abs(x - 1)][2 - (abs(x - 1))] == ' ':
             placed = True
-            board[abs(x-1)][2-(abs(x-1))] = computer
-        if count == 2 and board[abs(x-2)][2-(abs(x-2))] == ' ':
+            board[abs(x - 1)][2 - (abs(x - 1))] = computer
+        if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == ' ':
             placed = True
-            board[abs(x-2)][2-(abs(x-2))] = computer
+            board[abs(x - 2)][2 - (abs(x - 2))] = computer
     if placed == True:
         return True
     if placed == False:
         return False
+
 
 def computer_going_to_block():
     placed = False
@@ -184,12 +194,12 @@ def computer_going_to_block():
         if count == 2 and board[x][y] == ' ':
             placed = True
             board[x][y] = computer
-        if count == 2 and board[x][y-1] == ' ':
+        if count == 2 and board[x][y - 1] == ' ':
             placed = True
-            board[x][y-1] = computer
-        if count == 2 and board[x][y-2] == ' ':
+            board[x][y - 1] = computer
+        if count == 2 and board[x][y - 2] == ' ':
             placed = True
-            board[x][y-2] = computer
+            board[x][y - 2] = computer
         if placed == True:
             break
     if placed == True:
@@ -204,12 +214,12 @@ def computer_going_to_block():
             if count == 2 and board[y][x] == ' ':
                 placed = True
                 board[y][x] = computer
-            if count == 2 and board[y-1][x] == ' ':
+            if count == 2 and board[y - 1][x] == ' ':
                 placed = True
-                board[y-1][x] = computer
-            if count == 2 and board[y-2][x] == ' ':
+                board[y - 1][x] = computer
+            if count == 2 and board[y - 2][x] == ' ':
                 placed = True
-                board[y-2][x] = computer
+                board[y - 2][x] = computer
             if placed == True:
                 return True
     if placed == True:
@@ -222,30 +232,31 @@ def computer_going_to_block():
         if count == 2 and board[x][x] == ' ':
             placed = True
             board[x][x] = computer
-        if count == 2 and board[x-1][x-1] == ' ':
+        if count == 2 and board[x - 1][x - 1] == ' ':
             placed = True
-            board[x-1][x-1] = computer
-        if count == 2 and board[x-2][x-2] == ' ':
+            board[x - 1][x - 1] = computer
+        if count == 2 and board[x - 2][x - 2] == ' ':
             placed = True
-            board[x-2][x-2] = computer
+            board[x - 2][x - 2] = computer
     if placed == True:
         return True
     if placed == False:
         count = 0
         for x in range(3):
-            if board[x][2-x] == player:
+            if board[x][2 - x] == player:
                 count += 1
-        if count == 2 and board[x][2-x] == ' ':
+        if count == 2 and board[x][2 - x] == ' ':
             placed = True
-            board[x][2-x] = computer
-        if count == 2 and board[abs(x-1)][2-(abs(x-1))] == ' ':
+            board[x][2 - x] = computer
+        if count == 2 and board[abs(x - 1)][2 - (abs(x - 1))] == ' ':
             placed = True
-            board[abs(x-1)][2-(abs(x-1))] = computer
-        if count == 2 and board[abs(x-2)][2-(abs(x-2))] == ' ':
+            board[abs(x - 1)][2 - (abs(x - 1))] = computer
+        if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == ' ':
             placed = True
-            board[abs(x-2)][2-(abs(x-2))] = computer
+            board[abs(x - 2)][2 - (abs(x - 2))] = computer
     if placed == False:
         return False
+
 
 def turns():
     while True:
@@ -257,11 +268,12 @@ def turns():
                     break
 
         turn -= 1
-        col = turn//3
+        col = turn // 3
         row = turn % 3
         if board[col][row] == ' ':
             board[col][row] = player
             break
+
 
 def check_turn():
     playercount = 0
@@ -277,25 +289,30 @@ def check_turn():
     else:
         return False
 
+
 def poor_man_clear():
-    print("\033[H\033[J")
+    print("\n"*100)
+
 
 def print_title():
     print(r'___       ___   ___   _   ___   ___   _    __ ')
     print(r' |    |   |      |   |-|  |      |   | |  |__ ')
     print(r' |    |   |__    |   | |  |__    |   |_|  |__ ')
-    print("\n"*2)
+    print("\n" * 2)
+
 
 def clear_board():
     for x in range(3):
         for y in range(3):
             board[x][y] = ' '
 
+
 def thank_you():
     print(r'___        _                     _      ')
     print(r' |   |_|  |_|  |\ |  |/    \_/  | |  | |')
     print(r' |   | |  | |  | \|  |\     |   |_|  |_|')
     print('\n')
+
 
 def o_won():
     display_board()
@@ -304,6 +321,7 @@ def o_won():
     print(r'|_|      \/  \/   |_|  | \|')
     print('\n')
 
+
 def x_won():
     display_board()
     print(r'                    _       ')
@@ -311,11 +329,13 @@ def x_won():
     print(r'/ \       \/  \/   |_|  | \|')
     print('\n')
 
+
 def tie():
     print(r'___       ___')
     print(r' |    |   |__')
     print(r' |    |   |__')
     print('\n')
+
 
 def loading():
     import sys
@@ -329,19 +349,21 @@ def loading():
         sys.stdout.flush()
     print("\n")
 
+
 def loading_screen():
     poor_man_clear()
     print_title()
-    print('\n'*2)
+    print('\n' * 2)
     loading()
 
-board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
+
+board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 
 play_again = True
 
-loading_screen()
+## loading_screen()
 
-while play_again == True:
+while play_again:
     poor_man_clear()
     play_again = False
     clear_board()
@@ -366,27 +388,27 @@ while play_again == True:
     poor_man_clear()
     print_title()
     display_board()
-    #play 1
+    # play 1
     turns()
     print_title()
     display_board()
-    #play 2
+    # play 2
     first_move('random')
     poor_man_clear()
     print_title()
     display_board()
-    #play 3
+    # play 3
     turns()
     print_title()
     display_board()
-    #play4
+    # play4
     computer_going_to_win()
     computer_going_to_block()
     computer_turn()
     poor_man_clear()
     print_title()
     display_board()
-    #play 5
+    # play 5
     turns()
     print_title()
     display_board()
@@ -418,7 +440,7 @@ while play_again == True:
                     poor_man_clear()
                     break
         else:
-            #play 6
+            # play 6
             computer_going_to_win()
             if check_turn() == False:
                 computer_going_to_block()
@@ -455,7 +477,7 @@ while play_again == True:
                             poor_man_clear()
                             break
                 else:
-                    #play 7
+                    # play 7
                     turns()
                     print_title()
                     display_board()
@@ -489,7 +511,7 @@ while play_again == True:
                                     poor_man_clear()
                                     break
                         else:
-                            #play 8
+                            # play 8
                             computer_going_to_win()
                             if check_turn() == False:
                                 computer_going_to_block()
@@ -528,7 +550,7 @@ while play_again == True:
                                             poor_man_clear()
                                             break
                                 else:
-                                    #play 9
+                                    # play 9
                                     turns()
                                     poor_man_clear()
                                     print_title()

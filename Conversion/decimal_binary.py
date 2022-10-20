@@ -24,9 +24,6 @@ def conversion(num):
         values.append(values[-1] + values[-2])
         values.pop(-2)
         values.pop(-2)
-        if values_length == values_length:
-            pass
-
 
         if len(values) == 1:
             return values[0]
