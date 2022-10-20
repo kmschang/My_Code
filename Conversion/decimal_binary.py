@@ -10,7 +10,6 @@ def integer_input():
 
 
 def conversion(num):
-    n = 0
 
     if num == 1:
         return 1
@@ -22,13 +21,12 @@ def conversion(num):
 
     while len(values) != 1:
         values_length = len(values)
-        values.append(values[-1 - n] + values[-2 - n])
+        values.append(values[-1] + values[-2])
         values.pop(-2)
         values.pop(-2)
         if values_length == values_length:
             pass
 
-        n += 0
 
         if len(values) == 1:
             return values[0]
