@@ -576,7 +576,7 @@ while play_again == True:
     print_title()
     display_board()
     #play 2
-    first_move('notrandom')
+    first_move('random')
     poor_man_clear()
     print_title()
     display_board()
