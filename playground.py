@@ -4,6 +4,7 @@ from random import randint
 
 "This is another test"
 
+
 def again():
     while True:
         try:
@@ -45,3 +46,10 @@ while True:
 
     if not again():
         break
+
+name = 'Kyle'
+
+if name == 1:
+	print("Equal")
+else:
+    print("Not equal")
