@@ -24,17 +24,17 @@ name = str(input("What is your name?\n:"))
 name = name.capitalize()
 
 while True:
-
     player_output = int(input("Choose a number 1-100\n:"))
 
     count = 0
 
     while True:
-
         computer_output = randint(1, 100)
 
         print(f"Computer: {computer_output}, Player: {player_output}")
-        print(f"Difference:\u001b[31;1m {player_output - computer_output}\n\u001b[31;0m")
+        print(
+            f"Difference:\u001b[31;1m {player_output - computer_output}\n\u001b[31;0m"
+        )
 
         if player_output - computer_output == 0:
             print(f"\u001b[32;5mTook {count} times to be equal.\u001b[31;0m")
@@ -47,9 +47,11 @@ while True:
     if not again():
         break
 
-name = 'Kyle'
+name = "Kyle"
 
 if name == 1:
-	print("Equal")
+    print("Equal")
 else:
     print("Not equal")
+
+print("Hello World")
