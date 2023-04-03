@@ -1,5 +1,6 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+fail_fast: false
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -17,6 +18,12 @@ repos:
     rev: v3.3.1
     hooks:
     -   id: pyupgrade
+
+-   repo: https://github.com/pocc/pre-commit-hooks
+    rev: master
+    hooks:
+    -   id: clang-format
+        args: [--style=Google]
 
 -   repo: https://github.com/psf/black
     rev: 23.3.0
