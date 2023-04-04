@@ -1,15 +1,11 @@
 from random import randint
 
-"This is a test"
-
-"This is another test"
-
 
 def again():
     while True:
         try:
             yorn = int(input("\nDo you want to play again? (1 = yes or 0 = no)\n:"))
-        except:
+        except ValueError:
             print("Please only input 1 for yes or 0 for no. Thank you.")
         else:
             if yorn == 1:
