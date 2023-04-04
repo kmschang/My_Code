@@ -1,6 +1,4 @@
-
 from random import randint
-from math import ceil
 
 numbers = []
 n = 0
@@ -18,7 +16,7 @@ distancemean = []
 
 
 while y < 10:
-    distancemean.append(numbers[y]-mean)
+    distancemean.append(numbers[y] - mean)
     y += 1
 
 SD = sum(distancemean)
@@ -27,4 +25,5 @@ SDreal = SD / y
 
 print("σ = " + str(SDreal))
 
-# TODO make SDreal rounded to the nearst hundreth or thousanth but not scientific notation
+# TODO make SDreal rounded to the nearst hundredth or thousandth but not
+#  + scientific notation
