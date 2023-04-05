@@ -15,4 +15,11 @@ def nautical_tall():
     return new_new_height
 
 
+print("This is a test")
+
+print("What is this")
+
+print("Test")
+
+
 print(nautical_tall())

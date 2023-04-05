@@ -2,7 +2,7 @@ def integer_input():
     while True:
         try:
             question = int(input("Pick an integer.\n:"))
-        except:
+        except ValueError:
             print("Please only input integers. Thank you.")
         else:
             if isinstance(question, int):

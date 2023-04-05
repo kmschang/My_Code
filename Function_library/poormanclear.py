@@ -2,7 +2,7 @@ def poor_man_clear(num=100):
     while True:
         try:
             num = int(input("How many spaces do you want to clear?\n:"))
-        except:
+        except ValueError:
             print("Please only input integers. Thank you")
         else:
             if num > 0 and num < 101:

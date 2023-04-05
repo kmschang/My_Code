@@ -14,7 +14,7 @@ def guess():
     while True:
         try:
             question = int(input("\nPick a number 1-100\n:"))
-        except:
+        except ValueError:
             print("Please only input integers. Thank you.")
         else:
             if 0 < question < 101:
@@ -32,7 +32,7 @@ def again():
     while True:
         try:
             yorn = int(input("\nDo you want to play again? (1 = yes or 0 = no)\n:"))
-        except:
+        except ValueError:
             print("Please only input 1 for yes or 0 for no. Thank you.")
         else:
             if yorn == 1:

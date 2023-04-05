@@ -5,8 +5,8 @@
       <option name="arguments" value="" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ALWAYS" />
-      <option name="fileExtension" value="UNKNOWN" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="py" />
       <option name="immediateSync" value="true" />
       <option name="name" value="black" />
       <option name="output" value="" />
@@ -16,7 +16,27 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="$PROJECT_DIR$/scripts/black.bash" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Current File" />
+      <option name="scopeName" value="All Changed Files" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="" />
+      <envs />
+    </TaskOptions>
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="py" />
+      <option name="immediateSync" value="true" />
+      <option name="name" value="ruff" />
+      <option name="output" value="" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="$PROJECT_DIR$/scripts/ruff.bash" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="All Changed Files" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="" />
       <envs />

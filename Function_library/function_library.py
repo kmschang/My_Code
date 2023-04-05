@@ -33,7 +33,8 @@ def again():
 
 def lesser_of_two_evens(a, b):
     """
-    Prints the smaller number if both are even and the larger one if one or more is odd. Don't forget to add the print feature if you want to see the output.
+    Prints the smaller number if both are even and the larger one if one or more is odd. Don't forget to add the print
+    feature if you want to see the output.
     """
     if a % 2 == 0 and b % 2 == 0:
         return min(a, b)
@@ -198,7 +199,7 @@ def one_ten():
     while True:
         try:
             question = int(input("Pick a number 1-10.\n:"))
-        except:
+        except ValueError:
             print("Please only input integers. Thank you.")
             question = "Try again."
         else:
@@ -208,25 +209,11 @@ def one_ten():
                 print("Please only input integers 1-10. Thank you.")
 
 
-def again():
-    """
-    This askes you if you want to play again and askes you to confirm if you say no.
-    """
-    while True:
-        if str(input("Do you want to play again? (y or n)\n:")) == "y":
-            return True
-        while True:
-            if str(input("Are you sure want quit? (y or n)\n:")) == "y":
-                return False
-            else:
-                break
-
-
 def againv2():
     while True:
         try:
             yorn = int(input("Do you want to play again? (1 = yes or 0 = no)\n:"))
-        except:
+        except ValueError:
             print("Please only input 1 for yes or 0 for no. Thank you.")
         else:
             if yorn == 1:

@@ -2,9 +2,11 @@ from random import randint
 
 ## If you want to make it winnable, change first_move() to 'random' instead of 'notrandom'
 
-##If you want to change the win/lose message to 'You won", change x_won()  to 'youwon' if you want it to say 'X-won" change x_won() to 'xwon'.
+##If you want to change the win/lose message to 'You won", change x_won()
+# to 'youwon' if you want it to say 'X-won" change x_won() to 'xwon'.
 
-##If you want to change the win/lose message to 'You won", change o_won()  to 'youwon' if you want it to say 'O-won" change o_won() to 'owon'.
+##If you want to change the win/lose message to 'You won", change o_won()
+# to 'youwon' if you want it to say 'O-won" change o_won() to 'owon'.
 
 
 def coltonum(x, y):

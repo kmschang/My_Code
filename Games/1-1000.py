@@ -53,12 +53,14 @@ while againq is True:
 
         if ans1 < ans2:
             print(
-                f"\n{name1.capitalize()} won!\nThe number was {rannum}.\n{name1.capitalize()} was {ans1} away and {name2.capitalize()} was {ans2} away."
+                f"\n{name1.capitalize()} won!\nThe number was {rannum}.\n{name1.capitalize()} was {ans1} away "
+                f"and {name2.capitalize()} was {ans2} away."
             )
 
         if ans2 < ans1:
             print(
-                f"\n{name2.capitalize()} won!\nThe number was {rannum}.\n{name1.capitalize()} was {ans1} away and {name2.capitalize()} was {ans2} away."
+                f"\n{name2.capitalize()} won!\nThe number was {rannum}.\n{name1.capitalize()} was {ans1} away "
+                f"and {name2.capitalize()} was {ans2} away."
             )
 
         again = input("Do you want to play again? (y or n)\n:")

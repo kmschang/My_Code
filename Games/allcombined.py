@@ -6,7 +6,8 @@ while slogin is False:
     tpass = False
 
     print(
-        "If you are new, type 'm' to make a new login, if you just make a login, type 'l' to login.\nIf you want to leave just type end."
+        "If you are new, type 'm' to make a new login, if you just make a login, "
+        "type 'l' to login.\nIf you want to leave just type end."
     )
     question = input("Do you want to login (l) or make a login (m)?\n:")
     nques = question.lower()
@@ -266,11 +267,13 @@ if whatgame == 2:
 
         if player1 > player2:
             print(
-                f"Player 2 Wins!\nThe Number was {answerr}.\nPlayer 1 was {player1} away and player 2 was {player2} away.\n"
+                f"Player 2 Wins!\nThe Number was {answerr}.\nPlayer 1 was {player1} away "
+                f"and player 2 was {player2} away.\n"
             )
         if player2 > player1:
             print(
-                f"Player 1 Wins!\nThe number was {answerr}.\nPlayer 1 was {player1} away and player 2 was {player2} away.\n"
+                f"Player 1 Wins!\nThe number was {answerr}.\nPlayer 1 was {player1} away and "
+                f"player 2 was {player2} away.\n"
             )
         if player1 == player2:
             print("What are the odds. It was a draw.\n")

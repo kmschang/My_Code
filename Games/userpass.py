@@ -6,7 +6,8 @@ while slogin is False:
     tpass = False
 
     print(
-        "If you are new, type 'm' to make a new login, if you just make a login, type 'l' to login.\nIf you want to leave just type end."
+        "If you are new, type 'm' to make a new login, if you just make a login, type 'l' to login.\nIf you want to "
+        "leave just type end."
     )
     question = input("Do you want to login (l) or make a login (m)?\n:")
     nques = question.lower()

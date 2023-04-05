@@ -1,4 +1,5 @@
-import sys, time
+import sys
+import time
 
 print("Print in red")
 print("\u001b[31mHelloWorld")
