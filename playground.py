@@ -54,3 +54,7 @@ print("Hello World")
 print("Hello World")
 print("Setttingss")
 print("Schang")
+
+
+def settings():
+    print("Setttingss")

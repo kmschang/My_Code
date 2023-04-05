@@ -35,6 +35,6 @@ repos:
     -   id: codespell
         name: codespell
         description: Checks for common misspellings in text files.
-        entry: codespell -w playground.py
+        entry: codespell -w *.py *.md *.txt *.java
         language: python
         types: [text]
