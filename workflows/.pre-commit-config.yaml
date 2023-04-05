@@ -35,6 +35,6 @@ repos:
     -   id: codespell
         name: codespell
         description: Checks for common misspellings in text files.
-        entry: codespell --skip="*.git" *.py *.java
+        entry: codespell -w playground.py
         language: python
         types: [text]
