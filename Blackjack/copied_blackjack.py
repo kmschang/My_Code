@@ -34,7 +34,7 @@ values = {
 
 playing = True
 
-# CLASS DEFINTIONS:
+# CLASS DEFINITIONS:
 
 
 class Card:

@@ -13,8 +13,8 @@ while again is True:
     rannum = randint(1, 3)
 
     while True:
-        ques = input("Do you want heads or tails?\n:")
-        newques = ques.lower()
+        quest = input("Do you want heads or tails?\n:")
+        newques = quest.lower()
 
         if newques == "heads":
             qheads = True

@@ -18,7 +18,7 @@ while slogin is False:
             capname = name.capitalize()
 
             if name == "end":
-                print("Your operaion has been ended.")
+                print("Your operation has been ended.")
                 break
 
             while True:
@@ -30,7 +30,7 @@ while slogin is False:
                     break
 
                 if yn.lower() == "end":
-                    print("Your operaion has been ended.")
+                    print("Your operation has been ended.")
                     break
 
                 else:
@@ -45,7 +45,7 @@ while slogin is False:
             email = input(f"{capname}, what is your email?\n:")
 
             if email == "end":
-                print("Your operaion has been ended.")
+                print("Your operation has been ended.")
                 break
 
             while True:
@@ -57,7 +57,7 @@ while slogin is False:
                     break
 
                 if yn.lower() == "end":
-                    print("Your operaion has been ended.")
+                    print("Your operation has been ended.")
                     break
 
                 else:
@@ -72,7 +72,7 @@ while slogin is False:
             password = input(f"{capname}, what password do you want for {email}?\n:")
 
             if password == "end":
-                print("Your operaion has been ended.")
+                print("Your operation has been ended.")
                 break
 
             while True:
@@ -86,7 +86,7 @@ while slogin is False:
                     break
 
                 if yn.lower() == "end":
-                    print("Your operaion has been ended.")
+                    print("Your operation has been ended.")
                     break
 
                 else:

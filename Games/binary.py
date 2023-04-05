@@ -20,11 +20,11 @@ def counter():
         x += 1
 
 
-ques = str(input("Do you want binary or counter?\n:"))
+quest = str(input("Do you want binary or counter?\n:"))
 
-if ques.lower() == "binary":
+if quest.lower() == "binary":
     print(binary())
-elif ques.lower() == "counter":
+elif quest.lower() == "counter":
     print(counter())
 else:
     print("There is nothing like that here. Please try again.")

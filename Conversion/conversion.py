@@ -223,7 +223,7 @@ def mm_feet(text):
 
 
 print(
-    "We can conver between inches,feet,centimeters,meters,yards,miles,kilometers, and millimeters"
+    "We can convert between inches,feet,centimeters,meters,yards,miles,kilometers, and millimeters"
 )
 question = input("What do you want to convert? (inches to centimeters)\n:")
 new_question = question.split()

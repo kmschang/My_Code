@@ -19,7 +19,7 @@ def headstails():
 
 def again():
     """
-    This askes you if you want to play again and askes you to confirm if you say no.
+    This asks you if you want to play again and asks you to confirm if you say no.
     """
     while True:
         if str(input("Do you want to play again? (y or n)\n:")) == "y":

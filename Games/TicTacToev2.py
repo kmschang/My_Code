@@ -532,7 +532,7 @@ def loading():
     import sys
     import time
 
-    print("Loading Game. Please Wiat!")
+    print("Loading Game. Please Wait!")
     for i in range(0, 100):
         time.sleep(0.03)
         width = (i + 1) / 4
@@ -551,7 +551,7 @@ def ending():
     import sys
     import time
 
-    print("End Game. Please Wiat!")
+    print("End Game. Please Wait!")
     for i in range(0, 100):
         time.sleep(0.03)
         width = (i + 1) / 4
