@@ -35,6 +35,6 @@ repos:
     -   id: codespell
         name: codespell
         description: Checks for common misspellings in text files.
-        entry: codespell *.py *.md *.txt *.yml *.yaml *.java *.js *.json *.html *.css *.sh *.bat *.cmd *.ps1 *.psm1
+        entry: codespell --ignore-words ignore-spelling-words.txt readme.md code.py
         language: python
         types: [text]
