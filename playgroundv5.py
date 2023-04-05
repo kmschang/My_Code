@@ -5,5 +5,7 @@ result = number1 + number2
 
 print(result)
 
+print()
+
 with open("playground_outputs.txt", "a") as outputs:
     outputs.write(f"\n{result}")

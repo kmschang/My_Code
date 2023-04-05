@@ -20,7 +20,7 @@ def guess():
             if 0 < question < 101:
                 return question
             else:
-                print('Please only input integers 1-100. Thank you.')
+                print("Please only input integers 1-100. Thank you.")
 
 
 def random_number():
@@ -55,7 +55,6 @@ def game():
     welcome_screen(name)
 
     while True:
-
         player_guess = guess()
         computer_guess = random_number()
 
