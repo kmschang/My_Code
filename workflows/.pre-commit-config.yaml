@@ -38,3 +38,9 @@ repos:
         entry: codespell --skip '*.git' -w *.py *.md *.txt *.java
         language: python
         types: [text]
+
+-   repo: https://github.com/pocc/pre-commit-hooks
+    rev: master
+    hooks:
+    -   id: clang-format
+        args: [-i]
