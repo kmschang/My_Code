@@ -24,7 +24,17 @@ repos:
     hooks:
     -   id: black
 
-- repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: 'v0.0.260'
-  hooks:
-    - id: ruff
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: 'v0.0.260'
+    hooks:
+    -    id: ruff
+
+-   repo: https://github.com/codespell-project/codespell
+    rev: v1.16.0
+    hooks:
+    -   id: codespell
+        name: codespell
+        description: Checks for common misspellings in text files.
+        entry: codespell
+        language: python
+        types: [text]
