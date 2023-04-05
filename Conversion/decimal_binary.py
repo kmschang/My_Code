@@ -19,7 +19,7 @@ def conversion(num):
         num = num // 2
 
     while len(values) != 1:
-        values_length = len(values)
+        len(values)
         values.append(values[-1] + values[-2])
         values.pop(-2)
         values.pop(-2)

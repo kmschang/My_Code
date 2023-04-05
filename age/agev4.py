@@ -42,7 +42,7 @@ def age_in_seconds(text):
         leap_chance = False
     if nownownownowdate % 4 == 0 and nownowdate >= 3:
         leap_time = 86400
-    if leap_chance == True:
+    if leap_chance is True:
         leap_time = 86400
     else:
         leap_time = 0

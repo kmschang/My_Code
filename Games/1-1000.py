@@ -12,10 +12,10 @@ while True:
         qname = False
         break
 
-while againq == True:
+while againq is True:
     rannum = randint(0, 1001)
 
-    if qname == True:
+    if qname is True:
         name1 = input("What is the name of player 1?\n:")
         name2 = input("What is the name of player 2?\n:")
         names = True
@@ -27,7 +27,7 @@ while againq == True:
         names = False
         print("Lets go player 1 and player 2. Get ready to start the game.\n")
 
-    while names == True:
+    while names is True:
         while True:
             quess1 = int(
                 input(f"{name1.capitalize()}, pick a number from 1 to 1000.\n:")
@@ -79,7 +79,7 @@ while againq == True:
             againq = False
             break
 
-    while names == False and againq == True:
+    while names is False and againq is True:
         rannum = randint(0, 1001)
 
         while True:

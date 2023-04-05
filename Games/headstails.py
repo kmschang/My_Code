@@ -7,7 +7,7 @@ heads = False
 tails = False
 stop = False
 
-while again == True:
+while again is True:
     print("Thank you for playing! Hope you enjoy the game.")
 
     rannum = randint(1, 3)
@@ -27,7 +27,7 @@ while again == True:
             stop = True
             break
 
-    if stop == True:
+    if stop is True:
         break
 
     if rannum == 1:
@@ -35,16 +35,16 @@ while again == True:
     if rannum == 2:
         tails = True
 
-    if heads == True and qheads == True:
+    if heads is True and qheads is True:
         print("You won! It was heads!")
 
-    if heads == False and qheads == True:
+    if heads is False and qheads is True:
         print("You lost! It was tails!")
 
-    if tails == True and qtails == True:
+    if tails is True and qtails is True:
         print("You won! It was tails!")
 
-    if tails == False and qtails == True:
+    if tails is False and qtails is True:
         print("You lost! It was tails!")
 
     while True:

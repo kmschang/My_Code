@@ -69,35 +69,35 @@ def display_winning_board():
         twotwo = True
     else:
         twotwo = False
-    if zerozero == True and zeroone == True and zerotwo == True:
+    if zerozero is True and zeroone is True and zerotwo is True:
         board[0][0] = "\u001b[32;1mX"
         board[0][1] = "\u001b[32;1mX"
         board[0][2] = "\u001b[32;1mX"
-    if onezero == True and oneone == True and onetwo == True:
+    if onezero is True and oneone is True and onetwo is True:
         board[1][0] = "\u001b[32;1mX"
         board[1][1] = "\u001b[32;1mX"
         board[1][2] = "\u001b[32;1mX"
-    if twozero == True and twoone == True and twotwo == True:
+    if twozero is True and twoone is True and twotwo is True:
         board[2][0] = "\u001b[32;1mX"
         board[2][1] = "\u001b[32;1mX"
         board[2][2] = "\u001b[32;1mX"
-    if zerozero == True and onezero == True and twozero == True:
+    if zerozero is True and onezero is True and twozero is True:
         board[0][0] = "\u001b[32;1mX"
         board[1][0] = "\u001b[32;1mX"
         board[2][0] = "\u001b[32;1mX"
-    if zeroone == True and oneone == True and twoone == True:
+    if zeroone is True and oneone is True and twoone is True:
         board[0][1] = "\u001b[32;1mX"
         board[1][1] = "\u001b[32;1mX"
         board[2][1] = "\u001b[32;1mX"
-    if zerotwo == True and onetwo == True and twotwo == True:
+    if zerotwo is True and onetwo is True and twotwo is True:
         board[0][2] = "\u001b[32;1mX"
         board[1][2] = "\u001b[32;1mX"
         board[2][2] = "\u001b[32;1mX"
-    if zerozero == True and oneone == True and twotwo == True:
+    if zerozero is True and oneone is True and twotwo is True:
         board[0][0] = "\u001b[32;1mX"
         board[1][1] = "\u001b[32;1mX"
         board[2][2] = "\u001b[32;1mX"
-    if zerotwo == True and oneone == True and twozero == True:
+    if zerotwo is True and oneone is True and twozero is True:
         board[0][2] = "\u001b[32;1mX"
         board[1][1] = "\u001b[32;1mX"
         board[2][0] = "\u001b[32;1mX"
@@ -138,35 +138,35 @@ def display_winning_board():
         twotwo = True
     else:
         twotwo = False
-    if zerozero == True and zeroone == True and zerotwo == True:
+    if zerozero is True and zeroone is True and zerotwo is True:
         board[0][0] = "\u001b[32;1mO"
         board[0][1] = "\u001b[32;1mO"
         board[0][2] = "\u001b[32;1mO"
-    if onezero == True and oneone == True and onetwo == True:
+    if onezero is True and oneone is True and onetwo is True:
         board[1][0] = "\u001b[32;1mO"
         board[1][1] = "\u001b[32;1mO"
         board[1][2] = "\u001b[32;1mO"
-    if twozero == True and twoone == True and twotwo == True:
+    if twozero is True and twoone is True and twotwo is True:
         board[2][0] = "\u001b[32;1mO"
         board[2][1] = "\u001b[32;1mO"
         board[2][2] = "\u001b[32;1mO"
-    if zerozero == True and onezero == True and twozero == True:
+    if zerozero is True and onezero is True and twozero is True:
         board[0][0] = "\u001b[32;1mO"
         board[1][0] = "\u001b[32;1mO"
         board[2][0] = "\u001b[32;1mO"
-    if zeroone == True and oneone == True and twoone == True:
+    if zeroone is True and oneone is True and twoone is True:
         board[0][1] = "\u001b[32;1mO"
         board[1][1] = "\u001b[32;1mO"
         board[2][1] = "\u001b[32;1mO"
-    if zerotwo == True and onetwo == True and twotwo == True:
+    if zerotwo is True and onetwo is True and twotwo is True:
         board[0][2] = "\u001b[32;1mO"
         board[1][2] = "\u001b[32;1mO"
         board[2][2] = "\u001b[32;1mO"
-    if zerozero == True and oneone == True and twotwo == True:
+    if zerozero is True and oneone is True and twotwo is True:
         board[0][0] = "\u001b[32;1mO"
         board[1][1] = "\u001b[32;1mO"
         board[2][2] = "\u001b[32;1mO"
-    if zerotwo == True and oneone == True and twozero == True:
+    if zerotwo is True and oneone is True and twozero is True:
         board[0][2] = "\u001b[32;1mO"
         board[1][1] = "\u001b[32;1mO"
         board[2][0] = "\u001b[32;1mO"
@@ -260,9 +260,9 @@ def computer_turn():
                     board[x][y] = computer
                     done = True
                     break
-                if done == True:
+                if done is True:
                     break
-            if done == True:
+            if done is True:
                 break
     else:
         pass
@@ -284,11 +284,11 @@ def computer_going_to_win():
         if count == 2 and board[x][y - 2] == " ":
             placed = True
             board[x][y - 2] = computer
-        if placed == True:
+        if placed is True:
             break
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             count = 0
@@ -304,11 +304,11 @@ def computer_going_to_win():
             if count == 2 and board[y - 2][x] == " ":
                 placed = True
                 board[y - 2][x] = computer
-            if placed == True:
+            if placed is True:
                 return True
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][x] == computer:
@@ -322,9 +322,9 @@ def computer_going_to_win():
         if count == 2 and board[x - 2][x - 2] == " ":
             placed = True
             board[x - 2][x - 2] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][2 - x] == computer:
@@ -338,9 +338,9 @@ def computer_going_to_win():
         if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == " ":
             placed = True
             board[abs(x - 2)][2 - (abs(x - 2))] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         return False
 
 
@@ -361,11 +361,11 @@ def computer_going_to_block():
         if count == 2 and board[x][y - 2] == " ":
             placed = True
             board[x][y - 2] = computer
-        if placed == True:
+        if placed is True:
             break
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             count = 0
@@ -381,11 +381,11 @@ def computer_going_to_block():
             if count == 2 and board[y - 2][x] == " ":
                 placed = True
                 board[y - 2][x] = computer
-            if placed == True:
+            if placed is True:
                 return True
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][x] == player:
@@ -399,9 +399,9 @@ def computer_going_to_block():
         if count == 2 and board[x - 2][x - 2] == " ":
             placed = True
             board[x - 2][x - 2] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][2 - x] == player:
@@ -415,7 +415,7 @@ def computer_going_to_block():
         if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == " ":
             placed = True
             board[abs(x - 2)][2 - (abs(x - 2))] = computer
-    if placed == False:
+    if placed is False:
         return False
 
 
@@ -423,7 +423,7 @@ def turns():
     while True:
         while True:
             turn = input(f"Where would you like to place your {player}? (1-9)?\n:")
-            if turn.isdigit() == True:
+            if turn.isdigit() is True:
                 if 0 < int(turn) < 10:
                     turn = int(turn)
                     break
@@ -577,7 +577,7 @@ play_again = True
 
 loading_screen()
 
-while play_again == True:
+while play_again is True:
     poor_man_clear()
     play_again = False
     clear_board()
@@ -629,7 +629,7 @@ while play_again == True:
     turns()
     print_title()
     display_board()
-    if check_for_win("X") == True:
+    if check_for_win("X") is True:
         poor_man_clear()
         x_won("youwon")
         thank_you()
@@ -649,7 +649,7 @@ while play_again == True:
                 poor_man_clear()
                 break
     else:
-        if check_for_win("O") == True:
+        if check_for_win("O") is True:
             poor_man_clear()
             o_won("youwon")
             thank_you()
@@ -671,14 +671,14 @@ while play_again == True:
         else:
             # play 6
             computer_going_to_win()
-            if check_turn() == False:
+            if check_turn() is False:
                 computer_going_to_block()
-            if check_turn() == False:
+            if check_turn() is False:
                 computer_turn()
             poor_man_clear()
             print_title()
             display_board()
-            if check_for_win("X") == True:
+            if check_for_win("X") is True:
                 poor_man_clear()
                 x_won("youwon")
                 thank_you()
@@ -698,7 +698,7 @@ while play_again == True:
                         poor_man_clear()
                         break
             else:
-                if check_for_win("O") == True:
+                if check_for_win("O") is True:
                     poor_man_clear()
                     o_won("youwon")
                     thank_you()
@@ -722,7 +722,7 @@ while play_again == True:
                     turns()
                     print_title()
                     display_board()
-                    if check_for_win("X") == True:
+                    if check_for_win("X") is True:
                         poor_man_clear()
                         x_won("youwon")
                         thank_you()
@@ -742,7 +742,7 @@ while play_again == True:
                                 poor_man_clear()
                                 break
                     else:
-                        if check_for_win("O") == True:
+                        if check_for_win("O") is True:
                             poor_man_clear()
                             o_won("youwon")
                             thank_you()
@@ -764,14 +764,14 @@ while play_again == True:
                         else:
                             # play 8
                             computer_going_to_win()
-                            if check_turn() == False:
+                            if check_turn() is False:
                                 computer_going_to_block()
-                            if check_turn() == False:
+                            if check_turn() is False:
                                 computer_turn()
                             poor_man_clear()
                             print_title()
                             display_board()
-                            if check_for_win("X") == True:
+                            if check_for_win("X") is True:
                                 poor_man_clear()
                                 x_won("youwon")
                                 thank_you()
@@ -793,7 +793,7 @@ while play_again == True:
                                         poor_man_clear()
                                         break
                             else:
-                                if check_for_win("O") == True:
+                                if check_for_win("O") is True:
                                     poor_man_clear()
                                     o_won("youwon")
                                     thank_you()
@@ -820,12 +820,12 @@ while play_again == True:
                                     poor_man_clear()
                                     print_title()
                                     display_board()
-                                    if check_for_win("X") == True:
+                                    if check_for_win("X") is True:
                                         poor_man_clear()
                                         x_won("youwon")
                                         thank_you()
                                         display_winning_board()
-                                    if check_for_win("O") == True:
+                                    if check_for_win("O") is True:
                                         poor_man_clear()
                                         o_won("youwon")
                                         thank_you()

@@ -1,5 +1,4 @@
 from random import randint
-from typing import List
 
 
 def title_message():
@@ -45,7 +44,6 @@ ranks = {
 def deal(num):
     n = 0
     cards = {}
-    ranks = []
 
     while n < num:
         random_number = randint(0, 52)
@@ -54,43 +52,43 @@ def deal(num):
         card_suit_num += 1
 
         if card_suit_num == 1:
-            card_suit = "Hearts"
+            pass
         if card_suit_num == 2:
-            card_suit = "Clubs"
+            pass
         if card_suit_num == 3:
-            card_suit = "Diamonds"
+            pass
         if card_suit_num == 4:
-            card_suit = "Spades"
+            pass
 
         card_rank_ran_num = random_number // 4
         card_rank_ran_num += 1
 
         if card_rank_ran_num == 1:
-            card_rank = "Two"
+            pass
         if card_rank_ran_num == 2:
-            card_rank = "Three"
+            pass
         if card_rank_ran_num == 3:
-            card_rank = "Four"
+            pass
         if card_rank_ran_num == 4:
-            card_rank = "Five"
+            pass
         if card_rank_ran_num == 5:
-            card_rank = "Six"
+            pass
         if card_rank_ran_num == 6:
-            card_rank = "Seven"
+            pass
         if card_rank_ran_num == 7:
-            card_rank = "Eight"
+            pass
         if card_rank_ran_num == 8:
-            card_rank = "Nine"
+            pass
         if card_rank_ran_num == 9:
-            card_rank = "Ten"
+            pass
         if card_rank_ran_num == 10:
-            card_rank = "Jack"
+            pass
         if card_rank_ran_num == 11:
-            card_rank = "Queen"
+            pass
         if card_rank_ran_num == 12:
-            card_rank = "King"
+            pass
         if card_rank_ran_num == 13:
-            card_rank = "Ace"
+            pass
 
         cards[n] = card_rank_ran_num
 

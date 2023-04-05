@@ -1,6 +1,6 @@
 slogin = False
 
-while slogin == False:
+while slogin is False:
     tname = False
     tmail = False
     tpass = False
@@ -37,10 +37,10 @@ while slogin == False:
                     bk = False
                     break
 
-            if bk == True:
+            if bk is True:
                 break
 
-        while tname == True:
+        while tname is True:
             email = input(f"{capname}, what is your email?\n:")
 
             if email == "end":
@@ -64,10 +64,10 @@ while slogin == False:
                     bk = False
                     break
 
-            if bk == True:
+            if bk is True:
                 break
 
-        while tmail == True:
+        while tmail is True:
             password = input(f"{capname}, what password do you want for {email}?\n:")
 
             if password == "end":
@@ -93,7 +93,7 @@ while slogin == False:
                     bk = False
                     break
 
-            if bk == True:
+            if bk is True:
                 break
 
     if nques == "l":
@@ -102,7 +102,7 @@ while slogin == False:
         login = False
         admin = False
 
-        while tpass == True:
+        while tpass is True:
             inname = input("What is you name?\n:")
 
             if inname.lower() == "admin":
@@ -122,8 +122,8 @@ while slogin == False:
             else:
                 print("You are not in our system. Please Try again.\n")
 
-        while cornam == True:
-            if admin == True:
+        while cornam is True:
+            if admin is True:
                 break
 
             inmail = input(f"What is your email {capname}?\n:")
@@ -153,7 +153,7 @@ while slogin == False:
             else:
                 print("Incorrect e-mail! Please try again.")
 
-        if login == True:
+        if login is True:
             print("This is where you put your secret.")
             slogin = True
 
@@ -243,7 +243,7 @@ if whatgame == 2:
             elif answer1 > 1000:
                 print("Please try again!")
 
-        while endans != True:
+        while endans is not True:
             answer2 = int(input("Player 2.\nWhat is your number?"))
 
             if answer2 == 666:
@@ -256,7 +256,7 @@ if whatgame == 2:
             elif answer2 > 1000:
                 print("Please try again!\n")
 
-        if endans == True:
+        if endans is True:
             break
 
         answerr = randint(0, 1001)

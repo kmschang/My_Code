@@ -38,17 +38,17 @@ while True:
 
     isheads = headstails()
 
-    if isheads == True and qheads == True:
+    if isheads is True and qheads is True:
         print("It was heads. You won!")
 
-    if isheads == True and qheads == False:
+    if isheads is True and qheads is False:
         print("It was heads. You lost!")
 
-    if isheads == False and qheads == False:
+    if isheads is False and qheads is False:
         print("It was tails. You won!")
 
-    if isheads == False and qheads == True:
+    if isheads is False and qheads is True:
         print("It was tails. You lost!")
 
-    if again() == False:
+    if again() is False:
         break

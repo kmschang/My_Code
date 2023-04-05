@@ -100,9 +100,9 @@ def computer_turn():
                     board[x][y] = computer
                     done = True
                     break
-                if done == True:
+                if done is True:
                     break
-            if done == True:
+            if done is True:
                 break
     else:
         pass
@@ -124,11 +124,11 @@ def computer_going_to_win():
         if count == 2 and board[x][y - 2] == " ":
             placed = True
             board[x][y - 2] = computer
-        if placed == True:
+        if placed is True:
             break
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             count = 0
@@ -144,11 +144,11 @@ def computer_going_to_win():
             if count == 2 and board[y - 2][x] == " ":
                 placed = True
                 board[y - 2][x] = computer
-            if placed == True:
+            if placed is True:
                 return True
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][x] == computer:
@@ -162,9 +162,9 @@ def computer_going_to_win():
         if count == 2 and board[x - 2][x - 2] == " ":
             placed = True
             board[x - 2][x - 2] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][2 - x] == computer:
@@ -178,9 +178,9 @@ def computer_going_to_win():
         if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == " ":
             placed = True
             board[abs(x - 2)][2 - (abs(x - 2))] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         return False
 
 
@@ -201,11 +201,11 @@ def computer_going_to_block():
         if count == 2 and board[x][y - 2] == " ":
             placed = True
             board[x][y - 2] = computer
-        if placed == True:
+        if placed is True:
             break
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             count = 0
@@ -221,11 +221,11 @@ def computer_going_to_block():
             if count == 2 and board[y - 2][x] == " ":
                 placed = True
                 board[y - 2][x] = computer
-            if placed == True:
+            if placed is True:
                 return True
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][x] == player:
@@ -239,9 +239,9 @@ def computer_going_to_block():
         if count == 2 and board[x - 2][x - 2] == " ":
             placed = True
             board[x - 2][x - 2] = computer
-    if placed == True:
+    if placed is True:
         return True
-    if placed == False:
+    if placed is False:
         count = 0
         for x in range(3):
             if board[x][2 - x] == player:
@@ -255,7 +255,7 @@ def computer_going_to_block():
         if count == 2 and board[abs(x - 2)][2 - (abs(x - 2))] == " ":
             placed = True
             board[abs(x - 2)][2 - (abs(x - 2))] = computer
-    if placed == False:
+    if placed is False:
         return False
 
 
@@ -263,7 +263,7 @@ def turns():
     while True:
         while True:
             turn = input(f"Where would you like to place your {player}? (1-9)?\n:")
-            if turn.isdigit() == True:
+            if turn.isdigit() is True:
                 if 0 < int(turn) < 10:
                     turn = int(turn)
                     break
@@ -417,7 +417,7 @@ while play_again:
     turns()
     print_title()
     display_board()
-    if check_for_win("X") == True:
+    if check_for_win("X") is True:
         poor_man_clear()
         x_won()
         thank_you()
@@ -431,7 +431,7 @@ while play_again:
                 poor_man_clear()
                 break
     else:
-        if check_for_win("O") == True:
+        if check_for_win("O") is True:
             poor_man_clear()
             o_won()
             thank_you()
@@ -447,14 +447,14 @@ while play_again:
         else:
             # play 6
             computer_going_to_win()
-            if check_turn() == False:
+            if check_turn() is False:
                 computer_going_to_block()
-            if check_turn() == False:
+            if check_turn() is False:
                 computer_turn()
             poor_man_clear()
             print_title()
             display_board()
-            if check_for_win("X") == True:
+            if check_for_win("X") is True:
                 poor_man_clear()
                 x_won()
                 thank_you()
@@ -468,7 +468,7 @@ while play_again:
                         poor_man_clear()
                         break
             else:
-                if check_for_win("O") == True:
+                if check_for_win("O") is True:
                     poor_man_clear()
                     o_won()
                     thank_you()
@@ -486,7 +486,7 @@ while play_again:
                     turns()
                     print_title()
                     display_board()
-                    if check_for_win("X") == True:
+                    if check_for_win("X") is True:
                         poor_man_clear()
                         x_won()
                         thank_you()
@@ -500,7 +500,7 @@ while play_again:
                                 poor_man_clear()
                                 break
                     else:
-                        if check_for_win("O") == True:
+                        if check_for_win("O") is True:
                             poor_man_clear()
                             o_won()
                             thank_you()
@@ -516,14 +516,14 @@ while play_again:
                         else:
                             # play 8
                             computer_going_to_win()
-                            if check_turn() == False:
+                            if check_turn() is False:
                                 computer_going_to_block()
-                            if check_turn() == False:
+                            if check_turn() is False:
                                 computer_turn()
                             poor_man_clear()
                             print_title()
                             display_board()
-                            if check_for_win("X") == True:
+                            if check_for_win("X") is True:
                                 poor_man_clear()
                                 x_won()
                                 thank_you()
@@ -539,7 +539,7 @@ while play_again:
                                         poor_man_clear()
                                         break
                             else:
-                                if check_for_win("O") == True:
+                                if check_for_win("O") is True:
                                     poor_man_clear()
                                     o_won()
                                     thank_you()
@@ -560,11 +560,11 @@ while play_again:
                                     poor_man_clear()
                                     print_title()
                                     display_board()
-                                    if check_for_win("X") == True:
+                                    if check_for_win("X") is True:
                                         poor_man_clear()
                                         x_won()
                                         thank_you()
-                                    if check_for_win("O") == True:
+                                    if check_for_win("O") is True:
                                         poor_man_clear()
                                         o_won()
                                         thank_you()
