@@ -3,20 +3,46 @@ from typing import List
 
 
 def title_message():
-    print(r'|▔| |   |▔|  |▔▔   | /        T    |▔|  |▔▔  | /  ')
-    print(r'|▔| |   |▔|  |     |/_        |    |▔|  |    |/_  ')
-    print(r'|_| |__ | |  |__   |  \       |_T  | |  |__  |  \ ')
+    print(r"|▔| |   |▔|  |▔▔   | /        T    |▔|  |▔▔  | /  ")
+    print(r"|▔| |   |▔|  |     |/_        |    |▔|  |    |/_  ")
+    print(r"|_| |__ | |  |__   |  \       |_T  | |  |__  |  \ ")
     print("\n" * 2)
 
 
 suits = ["Hearts", "Clubs", "Diamonds", "Spades"]
-cards = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"]
-ranks = {"Two": 2, "Three": 3, "Four": 4, "Five": 5, "Six": 6, "Seven": 7, "Eight": 8, "Nine": 9, "Ten": 10, "Jack": 11,
-         "Queen": 10, "King": 10, "Ace": 11}
+cards = [
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+    "Jack",
+    "Queen",
+    "King",
+    "Ace",
+]
+ranks = {
+    "Two": 2,
+    "Three": 3,
+    "Four": 4,
+    "Five": 5,
+    "Six": 6,
+    "Seven": 7,
+    "Eight": 8,
+    "Nine": 9,
+    "Ten": 10,
+    "Jack": 11,
+    "Queen": 10,
+    "King": 10,
+    "Ace": 11,
+}
 
 
 def deal(num):
-
     n = 0
     cards = {}
     ranks = []
@@ -71,11 +97,6 @@ def deal(num):
         print(cards[n])
 
         n += 1
-
-
-
-
-
 
 
 deal(2)

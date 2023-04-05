@@ -1,6 +1,5 @@
 def age_in_seconds(text):
-
-    newbirth = text.split(',')
+    newbirth = text.split(",")
     newnewbirth = int(newbirth[0])
     newnewnewbirth = int(newbirth[1])
     newnewnewnewbirth = int(newbirth[2])
@@ -30,10 +29,10 @@ def age_in_seconds(text):
     if newnewbirth == 12:
         month_in_seconds = 0
     day_in_seconds = newnewnewbirth * 86400
-    year_in_seconds = (2020-newnewnewnewbirth)*31557600
+    year_in_seconds = (2020 - newnewnewnewbirth) * 31557600
 
     date = input("What is the date? (ie. 1,26,1999(full year))\n:")
-    nowdate = date.split(',')
+    nowdate = date.split(",")
     nownowdate = int(nowdate[0])
     nownownowdate = int(nowdate[1])
     nownownownowdate = int(nowdate[2])
@@ -76,15 +75,15 @@ def age_in_seconds(text):
 
     this_year_age = now_month_in_seconds + now_day_in_seconds
 
-    age = str(year_in_seconds + month_in_seconds + day_in_seconds +this_year_age + leap_time)
+    age = str(
+        year_in_seconds + month_in_seconds + day_in_seconds + this_year_age + leap_time
+    )
 
     reverse_age = age[::-1]
     if len(reverse_age) == 10:
-        thousand_seperator = (
-            f'{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]},{reverse_age[9:12]}')
+        thousand_seperator = f"{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]},{reverse_age[9:12]}"
     else:
-        thousand_seperator = (
-            f'{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]}')
+        thousand_seperator = f"{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]}"
     final = thousand_seperator[::-1]
     return final
 

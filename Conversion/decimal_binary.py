@@ -10,7 +10,6 @@ def integer_input():
 
 
 def conversion(num):
-
     if num == 1:
         return 1
 

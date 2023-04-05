@@ -1,6 +1,5 @@
 def age_in_seconds(text):
-
-    newbirth = text.split(',')
+    newbirth = text.split(",")
     newnewbirth = int(newbirth[0])
     newnewnewbirth = int(newbirth[1])
     newnewnewnewbirth = int(newbirth[2])
@@ -31,16 +30,14 @@ def age_in_seconds(text):
         month_in_seconds = 28857600
 
     day_in_seconds = newnewnewbirth * 86400
-    year_in_seconds = (2020-newnewnewnewbirth)*31557600
+    year_in_seconds = (2020 - newnewnewnewbirth) * 31557600
     age = str(year_in_seconds + month_in_seconds + day_in_seconds)
 
     reverse_age = age[::-1]
     if len(reverse_age) == 10:
-        thousand_seperator = (
-            f'{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]},{reverse_age[9:12]}')
+        thousand_seperator = f"{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]},{reverse_age[9:12]}"
     else:
-        thousand_seperator = (
-            f'{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]}')
+        thousand_seperator = f"{reverse_age[0:3]},{reverse_age[3:6]},{reverse_age[6:9]}"
     final = thousand_seperator[::-1]
     return final
 

@@ -1,4 +1,3 @@
-
 def binary_input():
     while True:
         cont = True
@@ -19,10 +18,10 @@ def conversion(num):
     n = 0
     values = []
     for digit in num:
-        binary_number = num[length-(1+n)]
+        binary_number = num[length - (1 + n)]
         binary_number_int = int(binary_number)
-        expoential_number = (2**(0+n))
-        addition = binary_number_int*expoential_number
+        expoential_number = 2 ** (0 + n)
+        addition = binary_number_int * expoential_number
         values.append(addition)
         n += 1
         if digit == digit:
@@ -30,7 +29,7 @@ def conversion(num):
 
     while len(values) != 1:
         values_length = len(values)
-        values.append(values[0]+values[1])
+        values.append(values[0] + values[1])
         values.pop(0)
         values.pop(0)
         if values_length == values_length:

@@ -4,7 +4,7 @@ def age_in_seconds():
         if year > 2020:
             print("Please put the real year. Thank you.")
         else:
-            year_in_seconds = (2020-year)*31557600
+            year_in_seconds = (2020 - year) * 31557600
             break
     while True:
         month = int(input("What month were you born in? (number)\n:"))
@@ -47,7 +47,6 @@ def age_in_seconds():
 
     day = int(input("What day of the month were you born?\n:"))
     day_in_seconds = day * 86400
-
 
     return year_in_seconds + month_in_seconds + day_in_seconds
 

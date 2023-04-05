@@ -1,4 +1,4 @@
-import sys,time
+import sys, time
 
 print("Print in red")
 print("\u001b[31mHelloWorld")
@@ -40,11 +40,14 @@ for i in range(0, 16):
 print("\u001b[0m")
 
 print("Print decorations")
-print("\u001b[1m BOLD \u001b[0m\u001b[4m Underline \u001b[0m\u001b[7m Reversed \u001b[0m")
+print(
+    "\u001b[1m BOLD \u001b[0m\u001b[4m Underline \u001b[0m\u001b[7m Reversed \u001b[0m"
+)
 print("\u001b[1m\u001b[4m\u001b[7m BOLD Underline Reversed \u001b[0m")
 print("\u001b[1m\u001b[31m Red Bold \u001b[0m")
 print("\u001b[4m\u001b[44m Blue Background Underline \u001b[0m")
 print("\u001b[0m")
+
 
 def loading1():
     print("Loading progress percentage...")
@@ -53,7 +56,10 @@ def loading1():
         sys.stdout.write("\u001b[1000D" + str(i + 1) + "%")
         sys.stdout.flush()
     print("\n")
+
+
 loading1()
+
 
 def loading2():
     print("Loading progress bar...")
@@ -61,7 +67,9 @@ def loading2():
         time.sleep(0.01)
         width = (i + 1) / 4
         bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
-        sys.stdout.write(u"\u001b[1000D" +  bar)
+        sys.stdout.write("\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
+
+
 loading2()

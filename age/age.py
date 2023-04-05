@@ -1,9 +1,8 @@
-
 def seconds_old():
     secinday = 86400
     secinyear = 31536000
     year = int(input("What year were you born in?\n:"))
-    yearold = (2020 - year)*secinyear
+    yearold = (2020 - year) * secinyear
 
     month = int(input("What month were you born?\n:"))
     if month == 1:
@@ -37,7 +36,7 @@ def seconds_old():
 
     secold = yearold + monthold + dayold
 
-    return (secold)
+    return secold
 
 
 print(seconds_old())
@@ -47,7 +46,7 @@ def minutes_old():
     secinday = 86400
     secinyear = 31536000
     year = int(input("What year were you born in?\n:"))
-    yearold = (2020 - year)*secinyear
+    yearold = (2020 - year) * secinyear
 
     month = int(input("What month were you born?\n:"))
     if month == 1:
@@ -81,10 +80,9 @@ def minutes_old():
 
     secold = yearold + monthold + dayold
     minold = secold / 60
-    return int((minold))
+    return int(minold)
 
 
 print(minutes_old())
 
-print ("Hello")
-
+print("Hello")

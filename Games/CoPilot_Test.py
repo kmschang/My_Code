@@ -7,4 +7,3 @@ for i in range(1, 101):
 
 # this is a regex that matches a string that is eight characters made up of letters and numbers
 # [a-zA-Z0-9]{8}
-

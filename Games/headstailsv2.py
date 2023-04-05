@@ -2,7 +2,7 @@ from random import randint
 
 
 def poor_man_clear(num=100):
-    print('\n'*num)
+    print("\n" * num)
 
 
 def headstails():
@@ -14,10 +14,10 @@ def headstails():
 
 def again():
     while True:
-        if str(input("Do you want to play again? (y or n)\n:")) == 'y':
+        if str(input("Do you want to play again? (y or n)\n:")) == "y":
             return True
         while True:
-            if str(input("Are you sure want quit? (y or n)\n:")) == 'y':
+            if str(input("Are you sure want quit? (y or n)\n:")) == "y":
                 return False
             else:
                 break
@@ -28,10 +28,8 @@ def again():
 poor_man_clear(100)
 
 while True:
-
     while True:
-
-        if str(input("Do you want heads or tails?\n:")) == 'heads':
+        if str(input("Do you want heads or tails?\n:")) == "heads":
             qheads = True
             break
         else:

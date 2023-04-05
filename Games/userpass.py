@@ -1,38 +1,34 @@
-
 slogin = False
 
 while slogin == False:
-
     tname = False
     tmail = False
     tpass = False
 
-    print("If you are new, type 'm' to make a new login, if you just make a login, type 'l' to login.\nIf you want to leave just type end.")
+    print(
+        "If you are new, type 'm' to make a new login, if you just make a login, type 'l' to login.\nIf you want to leave just type end."
+    )
     question = input("Do you want to login (l) or make a login (m)?\n:")
     nques = question.lower()
 
-    if nques == 'm':
-
+    if nques == "m":
         while True:
-
             name = input("what is your name?\n:")
             capname = name.capitalize()
 
-            if name == 'end':
+            if name == "end":
                 print("Your operaion has been ended.")
                 break
 
             while True:
+                yn = input(f"Are you sure you want {name} as your name? (y or n)?\n:")
 
-                yn = input(
-                    f"Are you sure you want {name} as your name? (y or n)?\n:")
-
-                if yn == 'y':
+                if yn == "y":
                     tname = True
                     bk = True
                     break
 
-                if yn.lower() == 'end':
+                if yn.lower() == "end":
                     print("Your operaion has been ended.")
                     break
 
@@ -45,24 +41,21 @@ while slogin == False:
                 break
 
         while tname == True:
-
             email = input(f"{capname}, what is your email?\n:")
 
-            if email == 'end':
+            if email == "end":
                 print("Your operaion has been ended.")
                 break
 
             while True:
+                yn = input(f"Are you sure you want {email} as your email? (y or n)?\n:")
 
-                yn = input(
-                    f"Are you sure you want {email} as your email? (y or n)?\n:")
-
-                if yn == 'y':
+                if yn == "y":
                     tmail = True
                     bk = True
                     break
 
-                if yn.lower() == 'end':
+                if yn.lower() == "end":
                     print("Your operaion has been ended.")
                     break
 
@@ -75,25 +68,23 @@ while slogin == False:
                 break
 
         while tmail == True:
+            password = input(f"{capname}, what password do you want for {email}?\n:")
 
-            password = input(
-                f"{capname}, what password do you want for {email}?\n:")
-
-            if password == 'end':
+            if password == "end":
                 print("Your operaion has been ended.")
                 break
 
             while True:
-
                 yn = input(
-                    f"Are you sure you want {password} as your password? (y or n)?\n:")
+                    f"Are you sure you want {password} as your password? (y or n)?\n:"
+                )
 
-                if yn == 'y':
+                if yn == "y":
                     tpass = True
                     bk = True
                     break
 
-                if yn.lower() == 'end':
+                if yn.lower() == "end":
                     print("Your operaion has been ended.")
                     break
 
@@ -105,15 +96,13 @@ while slogin == False:
             if bk == True:
                 break
 
-    if nques == 'l':
-
+    if nques == "l":
         tpass = True
         cornam = False
         login = False
         admin = False
 
         while tpass == True:
-
             inname = input("What is you name?\n:")
 
             if inname.lower() == "admin":
@@ -134,23 +123,20 @@ while slogin == False:
                 print("You are not in our system. Please Try again.\n")
 
         while cornam == True:
-
             if admin == True:
                 break
             else:
                 inmail = input(f"What is your email {capname}?\n:")
 
-                if inmail.lower() == 'end':
+                if inmail.lower() == "end":
                     print("Your operation has been ended.\n")
                     break
 
                 if inmail.lower() == email.lower():
-
                     while True:
-
                         inpass = input(f"What is your password {capname}?\n:")
 
-                        if inpass.lower() == 'end':
+                        if inpass.lower() == "end":
                             print("Your operation has been ended.\n")
                             break
 
@@ -160,7 +146,6 @@ while slogin == False:
                             break
 
                         else:
-
                             print("Incorrect password! Please try again.")
 
                     break
@@ -174,7 +159,6 @@ while slogin == False:
 
             break
 
-    if nques == 'end':
-
+    if nques == "end":
         break
     print("You passed the test")

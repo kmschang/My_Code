@@ -8,23 +8,21 @@ tails = False
 stop = False
 
 while again == True:
-
     print("Thank you for playing! Hope you enjoy the game.")
 
     rannum = randint(1, 3)
 
     while True:
-
         ques = input("Do you want heads or tails?\n:")
         newques = ques.lower()
 
-        if newques == 'heads':
+        if newques == "heads":
             qheads = True
             break
-        if newques == 'tails':
+        if newques == "tails":
             qtails = True
             break
-        if newques == 'end':
+        if newques == "end":
             print("Your operation has been stopped!")
             stop = True
             break
@@ -50,13 +48,11 @@ while again == True:
         print("You lost! It was tails!")
 
     while True:
+        againq = input("Thank you for playing! Do you want to play again? (y or n)\n:")
 
-        againq = input(
-            "Thank you for playing! Do you want to play again? (y or n)\n:")
-
-        if againq.lower() == 'y':
+        if againq.lower() == "y":
             again = True
             break
-        if againq.lower() == 'n':
+        if againq.lower() == "n":
             again = False
             break

@@ -1,15 +1,16 @@
 def poor_man_clear(num=100):
-    '''
+    """
     This clears the screen to make it look nicer
-    '''
-    print('\n'*num)
+    """
+    print("\n" * num)
 
 
 def headstails():
-    '''
+    """
     Make sure that you import randint before. This chooses between 1 and 2.
-    '''
+    """
     from random import randint
+
     if randint(1, 3) == 1:
         return True
     if randint(1, 3) == 2:
@@ -17,23 +18,23 @@ def headstails():
 
 
 def again():
-    '''
+    """
     This askes you if you want to play again and askes you to confirm if you say no.
-    '''
+    """
     while True:
-        if str(input("Do you want to play again? (y or n)\n:")) == 'y':
+        if str(input("Do you want to play again? (y or n)\n:")) == "y":
             return True
         while True:
-            if str(input("Are you sure want quit? (y or n)\n:")) == 'y':
+            if str(input("Are you sure want quit? (y or n)\n:")) == "y":
                 return False
             else:
                 break
 
 
 def lesser_of_two_evens(a, b):
-    '''
+    """
     Prints the smaller number if both are even and the larger one if one or more is odd. Don't forget to add the print feature if you want to see the output.
-    '''
+    """
     if a % 2 == 0 and b % 2 == 0:
         return min(a, b)
     else:
@@ -41,17 +42,22 @@ def lesser_of_two_evens(a, b):
 
 
 def anaimal_crackers(text="test test"):
-    '''
+    """
     Tells you if the first letter of two words is the same.
-    '''
+    """
     wordlist = text.split()
 
     return wordlist[0].lower()[0] == wordlist[1].lower()[0]
 
 
 def makes_twenty(num1, num2):
-
-    return (num1+num2) == 20 or num1 == 20 or num2 == 20 or (num1-num2) == 20 or (num2-num1) == 20
+    return (
+        (num1 + num2) == 20
+        or num1 == 20
+        or num2 == 20
+        or (num1 - num2) == 20
+        or (num2 - num1) == 20
+    )
 
 
 def old_macdonald(name="macdonalds"):
@@ -68,15 +74,19 @@ def master_yoda(sentence="We are ready"):
 
 
 def almost_there(num):
-
-    return (abs(num-100)) <= 10 or (abs(num+100)) <= 10 or (abs(num-200)) <= 10 or (abs(num+200)) <= 10
+    return (
+        (abs(num - 100)) <= 10
+        or (abs(num + 100)) <= 10
+        or (abs(num - 200)) <= 10
+        or (abs(num + 200)) <= 10
+    )
 
 
 def seconds_old():
     secinday = 86400
     secinyear = 31536000
     year = int(input("What year were you born in?\n:"))
-    yearold = (2020 - year)*secinyear
+    yearold = (2020 - year) * secinyear
 
     month = int(input("What month were you born?\n:"))
     if month == 1:
@@ -110,14 +120,14 @@ def seconds_old():
 
     secold = yearold + monthold + dayold
 
-    return (secold)
+    return secold
 
 
 def minutes_old():
     secinday = 86400
     secinyear = 31536000
     year = int(input("What year were you born in?\n:"))
-    yearold = (2020 - year)*secinyear
+    yearold = (2020 - year) * secinyear
 
     month = int(input("What month were you born?\n:"))
     if month == 1:
@@ -151,14 +161,14 @@ def minutes_old():
 
     secold = yearold + monthold + dayold
     minold = secold / 60
-    return int((minold))
+    return int(minold)
 
 
 def black_jack(num1, num2, num3):
-    if num1+num2+num3 > 21:
-        return 'Bust'
+    if num1 + num2 + num3 > 21:
+        return "Bust"
     else:
-        return num1+num2+num3
+        return num1 + num2 + num3
 
 
 def check_even(num):
@@ -172,12 +182,13 @@ def square(num):
 def loading2():
     import sys
     import time
+
     print("Loading progress bar...")
     for i in range(0, 100):
         time.sleep(0.05)
         width = (i + 1) / 4
         bar = "[" + "#" * int(width) + " " * (25 - int(width)) + "]"
-        sys.stdout.write(u"\u001b[1000D" + bar)
+        sys.stdout.write("\u001b[1000D" + bar)
         sys.stdout.flush()
     print("\n")
 
@@ -189,31 +200,29 @@ def one_ten():
             question = int(input("Pick a number 1-10.\n:"))
         except:
             print("Please only input integers. Thank you.")
-            question = ("Try again.")
+            question = "Try again."
         else:
             if question > 0 and question < 11:
                 break
             else:
-                print ('Please only input integers 1-10. Thank you.')
-
+                print("Please only input integers 1-10. Thank you.")
 
 
 def again():
-    '''
+    """
     This askes you if you want to play again and askes you to confirm if you say no.
-    '''
+    """
     while True:
-        if str(input("Do you want to play again? (y or n)\n:")) == 'y':
+        if str(input("Do you want to play again? (y or n)\n:")) == "y":
             return True
         while True:
-            if str(input("Are you sure want quit? (y or n)\n:")) == 'y':
+            if str(input("Are you sure want quit? (y or n)\n:")) == "y":
                 return False
             else:
                 break
 
 
 def againv2():
-
     while True:
         try:
             yorn = int(input("Do you want to play again? (1 = yes or 0 = no)\n:"))
